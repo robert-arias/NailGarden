@@ -1,0 +1,84 @@
+/* Initialize all elements*/
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Navbar attributes*/
+.navigation {
+    display: flex;
+    min-height: 76px;
+    background-color: #ECE7E3;
+    padding: 10px 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*Burger menu container*/
+.nav-burger {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    align-items: center;
+    -webkit-align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+}
+
+/*Burger button and pseudo elements common attributes*/
+.burger-btn,
+.burger-btn::before,
+.burger-btn::after {
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+}
+
+/*Burger button attributes*/
+.burger-btn {
+    width: 20px;
+    position: relative;
+}
+
+/*Burger button pseudo elements attributes*/
+.burger-btn::before,
+.burger-btn::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    right: 0;
+}
+
+/*Burger button before pseudo element attribute; makes it to be 8px over the burger button line*/
+.burger-btn::before {
+    transform: translateY(-8px);
+}
+
+/*Burger button after pseudo element attribute; makes it to be 8px below the burger button line*/
+.burger-btn::after {
+    transform: translateY(8px);
+}
+
+/*Burger button when it's clicked. Makes button line disappear*/
+.nav-burger.open .burger-btn {
+    background: transparent;
+}
+
+/*Burger button before pseudo element when it's clicked. Makes button before line rotate*/
+.nav-burger.open .burger-btn::before {
+    transform: rotate(45deg);
+}
+
+/*Burger button before pseudo element when it's clicked. Makes button after line rotate*/
+.nav-burger.open .burger-btn::after {
+    transform: rotate(-45deg);
+}
