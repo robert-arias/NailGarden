@@ -157,6 +157,7 @@ span.active::before {
     background-color: azure;
 }
 
+/*NO FUNCIONA*/
 ul.nav-items li a:hover span::before {
     transform: scaleX(0);
 }
