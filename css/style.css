@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 /* Initialize all elements*/
 *, *:before, *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Playfair Display', serif;
 }
+
+
 
 /*Navbar attributes*/
 .navigation {
     display: flex;
-    min-height: 76px;
+    height: 76px;
     background-color: #ECE7E3;
     padding: 10px 20px;
     justify-content: flex-end;
     align-items: center;
+    position: fixed;
+    width: 100%;
 }
 
 /*Burger menu container*/
@@ -26,8 +33,8 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    transition: all .1s ease-in-out;
-    -webkit-transition: all .1s ease-in-out;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
 }
 
 /*Burger button and pseudo elements common attributes*/
@@ -38,8 +45,8 @@
     background: #fff;
     border-radius: 5px;
     -webkit-border-radius: 5px;
-    transition: all .1s ease-in-out;
-    -webkit-transition: all .1s ease-in-out;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
 }
 
 /*Burger button attributes*/
@@ -61,11 +68,13 @@
 /*Burger button before pseudo element attribute; makes it to be 8px over the burger button line*/
 .burger-btn::before {
     transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
 }
 
 /*Burger button after pseudo element attribute; makes it to be 8px below the burger button line*/
 .burger-btn::after {
     transform: translateY(8px);
+    -webkit-transform: translateY(8px);
 }
 
 /*Burger button when it's clicked. Makes button line disappear*/
@@ -76,9 +85,78 @@
 /*Burger button before pseudo element when it's clicked. Makes button before line rotate*/
 .nav-burger.open .burger-btn::before {
     transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 /*Burger button before pseudo element when it's clicked. Makes button after line rotate*/
 .nav-burger.open .burger-btn::after {
     transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+/*Ul where the menu items are gonna be*/
+ul.nav-items {
+    position: fixed;
+    left: 0;
+    top: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 76px);
+    background-color: #ECE7E3;
+    width: 100%;
+    padding-top: 55px;
+    transform: translateX(101%);
+    overflow: hidden;
+    list-style: none;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+ul.nav-items li {
+    padding: 15px 0;
+}
+
+ul.nav-items li a {
+    color: black;
+    text-decoration: none;
+}
+
+ul.nav-items li a.active {
+    color: #DD2163;
+}
+
+#nav-menu.open {
+    transform: translateX(0%);
+}
+
+span.underline {
+    position: relative;
+}
+
+span.underline::before {
+    content: '';
+    position: absolute;
+    width: 108%;
+    border-radius: 3px;
+    transform: scaleX(1);
+    height: 7px;
+    left: -5px;
+    bottom: 6%;
+    background-color: #f0dc82;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+    z-index: -1;
+}
+
+span.active::before {
+    background-color: azure;
+}
+
+ul.nav-items li a:hover span::before {
+    transform: scaleX(0);
 }
