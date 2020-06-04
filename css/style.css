@@ -143,7 +143,7 @@ span.underline::before {
     position: absolute;
     width: 108%;
     border-radius: 3px;
-    transform: scaleX(1);
+    transform: scaleX(0);
     height: 7px;
     left: -5px;
     bottom: 6%;
@@ -157,7 +157,6 @@ span.active::before {
     background-color: azure;
 }
 
-/*NO FUNCIONA*/
 ul.nav-items li a:hover span::before {
-    transform: scaleX(0);
+    transform: scaleX(1);
 }
