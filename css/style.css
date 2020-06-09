@@ -99,7 +99,6 @@ ul.nav-items {
     top: 76px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     height: calc(100vh - 76px);
     background-color: #ECE7E3;
@@ -112,7 +111,6 @@ ul.nav-items {
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     font-size: 1.25em;
-    font-weight: bold;
 }
 
 ul.nav-items li {
