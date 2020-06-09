@@ -158,3 +158,29 @@ span.active::before {
 ul.nav-items li a:hover span::before {
     transform: scaleX(1);
 }
+
+@media screen and (min-width: 1000px) {
+    nav.navigation > div.nav-burger {
+        display: none;
+    }
+    
+    ul.nav-items {
+          position: static;
+          flex-direction: row;
+          justify-content: center;
+          height: auto;
+          transform: translateX(0);
+          padding: 0;
+          width: auto;
+          margin-right: 65px;
+          font-size: 1em;
+    }
+
+    ul.nav-items li {
+        padding: 0 15px;
+    }
+    
+    ul.nav-items li:last-child {
+        padding: 0 0 0 15px;
+    }
+}
