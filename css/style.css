@@ -30,7 +30,7 @@ div.logo {
     align-items: center;
     font-size: 0.8em;
     width: 105px;
-    border: 3px solid white;
+    border: 2px solid white;
     height: 50px;
 }
 
@@ -181,7 +181,16 @@ ul.nav-items li a:hover span::before {
     nav.navigation > div.nav-burger {
         display: none;
     }
-    
+
+    div.logo {
+      margin-left: 65px;
+      width: 130px;
+      border-color: black;
+    }
+    div.logo > span {
+      color: black;
+    }
+
     ul.nav-items {
           position: static;
           flex-direction: row;
@@ -192,12 +201,13 @@ ul.nav-items li a:hover span::before {
           width: auto;
           margin-right: 65px;
           font-size: 1em;
+          letter-spacing: 1px;
     }
 
     ul.nav-items li {
         padding: 0 15px;
     }
-    
+
     ul.nav-items li:last-child {
         padding: 0 0 0 15px;
     }
