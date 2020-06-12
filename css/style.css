@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 
 :root {
-    --nav-color: #fee9e8;
+    --nav-color: #eba2a3;
+    --logo-color: #fff;
+    --menu-font-color: #fff;
+    --logo-font-family: 'Source Sans Pro';
+    --active-color: #DE3163;
+    --highlighter-color: #f5c1d0;
 }
 
 /* Initialize all elements*/
@@ -28,18 +34,20 @@
 
 /*Logo attributes*/
 div.logo {
-    font-size: 14px;
-    font-family: sans-serif;
+    font-size: 12px;
+    font-family: var(--logo-font-family), sans-serif;
     display: flex;
     justify-content: center;
     position: relative;
     padding: 0.5em 1em;
-    border: 2px solid #e55743;
-    width: 180px;
+    border: 2px solid var(--logo-color);
+    width: 150px;
     text-transform: uppercase;
     letter-spacing: .25em;
-    color: #e55743;
+    color: var(--logo-color);
     font-weight: bold;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
 }
 
 div.logo::before {
@@ -47,7 +55,7 @@ div.logo::before {
     position: absolute;
     width: 90%;
     height: 170%;
-    border: 2px solid #e55743;
+    border: 2px solid var(--logo-color);
     left: 5%;
     top: -35%;
 }
@@ -150,16 +158,21 @@ ul.nav-items li {
 }
 
 ul.nav-items li a {
-    color: black;
+    color: var(--menu-font-color);
     text-decoration: none;
 }
 
 ul.nav-items li a.active {
-    color: #DD2163;
+    color: var(--active-color);
+    font-weight: bold;
 }
 
 #nav-menu.open {
     transform: translateX(0%);
+}
+
+#logo.open {
+    transform: translateX(-115%);
 }
 
 span.underline {
@@ -175,7 +188,7 @@ span.underline::before {
     height: 7px;
     left: -5px;
     bottom: 6%;
-    background-color: #f0dc82;
+    background-color: var(--highlighter-color);
     transform-origin: bottom left;
     transition: transform 0.25s ease-out;
     z-index: -1;
@@ -196,27 +209,8 @@ ul.nav-items li a:hover span::before {
 
     div.logo {
         font-size: 14px;
-        font-family: sans-serif;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        padding: 0.5em 1em;
-        border: 2px solid #e55743;
         width: 180px;
-        text-transform: uppercase;
-        letter-spacing: .25em;
-        color: #e55743;
-        font-weight: bold;
-    }
-    
-    div.logo::before {
-        content: '';
-        position: absolute;
-        width: 90%;
-        height: 170%;
-        border: 2px solid #e55743;
-        left: 5%;
-        top: -35%;
+        margin-left: 20px;
     }
 
     ul.nav-items {
@@ -229,7 +223,6 @@ ul.nav-items li a:hover span::before {
           width: auto;
           margin-right: 65px;
           font-size: 1em;
-          letter-spacing: 1px;
     }
 
     ul.nav-items li {
