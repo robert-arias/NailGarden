@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 /*Variables*/
@@ -17,11 +17,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Playfair Display', serif;
 }
 
+/*1. NAV BAR*/
 /*Navbar attributes*/
 .navigation {
+    font-family: 'Playfair Display', serif;
     display: flex;
     height: 76px;
     background-color: var(--nav-color);
@@ -29,7 +30,9 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 100;
 }
 
 /*Logo attributes*/
@@ -201,8 +204,37 @@ span.active::before {
 ul.nav-items li a:hover span::before {
     transform: scaleX(1);
 }
+/*-----------------------------------NAV BAR FINISHED--------------------------------------*/
+
+/*3. Products*/
+ .products-container {
+     font-family: 'Montserrat', sans-serif;
+     font-size: .8em;
+     position: relative;
+     top: 76px;
+     width: 100%;
+     margin: 0;
+ }
+
+ .product {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+ }
+
+ .products-container img {
+     max-width: 100%;
+     max-height: 100%;
+     margin-bottom: 10px;
+ }
+
+ .products-container p {
+     margin-bottom: 25px;
+     padding: 0 15px;
+ }
 
 @media screen and (min-width: 1000px) {
+    /*1. NAV BAR */
     nav.navigation > div.nav-burger {
         display: none;
     }
@@ -231,5 +263,37 @@ ul.nav-items li a:hover span::before {
 
     ul.nav-items li:last-child {
         padding: 0 0 0 15px;
+    }
+    /*-----------------------------NAV BAR FINISHED------------------------------*/
+
+    /*3. Products*/
+    .products-container {
+        width: 80%;
+        margin: 25px auto;
+    }
+
+    .product {
+        font-size: 1.2em;
+        line-height: 1.4em;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 30px;
+     }
+    
+     .products-container img {
+         width: 500px;
+         height: auto;
+     }
+
+     .product:nth-child(even) {
+         flex-direction: row-reverse;
+     }
+    
+     .products-container p {
+         width: 500px;
+     }
+
+     .products-container p:nth-child(odd) {
+         padding-left: 0;        
     }
 }
