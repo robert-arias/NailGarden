@@ -222,7 +222,7 @@ ul.nav-items li a:hover span::before {
  .product {
      font-family: 'Montserrat', sans-serif;
      font-size: .8em;
-     color: black;
+     color: #f7f2dc;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -302,7 +302,7 @@ ul.nav-items li a:hover span::before {
         justify-content: center;
         margin-bottom: 30px;
      }
-    
+
      .products-container img {
          width: 500px;
          height: auto;
@@ -311,12 +311,12 @@ ul.nav-items li a:hover span::before {
      .product:nth-child(even) {
          flex-direction: row-reverse;
      }
-    
+
      .products-container p {
          width: 500px;
      }
 
      .products-container p:nth-child(odd) {
-         padding-left: 0;        
+         padding-left: 0;
     }
 }
