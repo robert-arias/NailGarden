@@ -215,18 +215,18 @@ ul.nav-items li a:hover span::before {
      margin: 0;
      padding-top: 15px;
      display: flex;
-     flex-direction: column;
-     align-items: center;
+     flex-wrap: wrap;
+     justify-content: center;
  }
 
  .product {
      font-family: 'Montserrat', sans-serif;
      font-size: .8em;
-     color: #f7f2dc;
+     color: #2d170e;
      display: flex;
      flex-direction: column;
      align-items: center;
-     width: 325px;
+     width: 75%;
      background-color: #ddcfb1;
      margin-bottom: 25px;
      border-radius: 5px;
@@ -234,7 +234,7 @@ ul.nav-items li a:hover span::before {
  }
 
  .product:nth-child(even) {
-     background-color: #f59bbb;
+     background-color: var(--nav-color);
      color: white;
  }
 
@@ -247,13 +247,51 @@ ul.nav-items li a:hover span::before {
  .product h3 {
      font-family: var(--menu-font-family), sans-serif;
      font-size: 2em;
-     width: 90%;
      margin-bottom: 5px;
  }
 
  .product p {
      width: 90%;
-     margin-bottom: 25px;
+     line-height: 1.3em;
+ }
+
+ .product a {
+     z-index: 1;
+     text-decoration: none;
+     color: #2d170e;
+     padding: 10px 25px;
+     border: 2px solid #2d170e;
+     margin: 25px 0 15px 0;
+     position: relative;
+     text-transform: uppercase;
+ }
+
+ .product:nth-child(even) a {
+     color: white;
+     border-color: white;
+ }
+
+ .product a::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #b1a68e;
+    transform-origin: center top;
+    transform: scaleY(0);
+    transition: transform 0.25s ease-in-out;
+ }
+
+ .product:nth-child(even) a::before {
+     background-color: #d49293;
+ }
+
+ .product a:hover::before {
+    transform-origin: center bottom;
+    transform: scaleY(1);
  }
 
 @media screen and (min-width: 1000px) {
