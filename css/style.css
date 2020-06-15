@@ -10,6 +10,7 @@
     --logo-font-family: 'Source Sans Pro';
     --active-color: #DE3163;
     --highlighter-color: #f5c1d0;
+    --menu-font-family: 'Playfair Display';
 }
 
 /* Initialize all elements*/
@@ -208,29 +209,51 @@ ul.nav-items li a:hover span::before {
 
 /*3. Products*/
  .products-container {
-     font-family: 'Montserrat', sans-serif;
-     font-size: .8em;
      position: relative;
      top: 76px;
      width: 100%;
      margin: 0;
+     padding-top: 15px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
  }
 
  .product {
-    display: flex;
-    flex-direction: column;
-    width: 100%; 
+     font-family: 'Montserrat', sans-serif;
+     font-size: .8em;
+     color: black;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 325px;
+     background-color: #ddcfb1;
+     margin-bottom: 25px;
+     border-radius: 5px;
+     overflow: hidden;
  }
 
- .products-container img {
-     max-width: 100%;
-     max-height: 100%;
+ .product:nth-child(even) {
+     background-color: #f59bbb;
+     color: white;
+ }
+
+ .product img {
+     width: 100%;
+     height: auto;
      margin-bottom: 10px;
  }
 
- .products-container p {
+ .product h3 {
+     font-family: var(--menu-font-family), sans-serif;
+     font-size: 2em;
+     width: 90%;
+     margin-bottom: 5px;
+ }
+
+ .product p {
+     width: 90%;
      margin-bottom: 25px;
-     padding: 0 15px;
  }
 
 @media screen and (min-width: 1000px) {
