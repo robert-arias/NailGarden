@@ -364,7 +364,7 @@ ul.nav-items li a:hover span::before {
     .product-description {
       position: absolute;
       background-color: #ddcfb1;
-      top: 20px;
+      top: 50px;
       left: 620px;
       width: 550px;
       height: 300px;
