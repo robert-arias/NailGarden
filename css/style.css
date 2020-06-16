@@ -371,9 +371,11 @@ ul.nav-items li a:hover span::before {
     }
 
     .product:nth-child(even) {
-        background-color: var(--nav-color);
+        background-color: white;
         color: white;
     }
+
+
 
     .product h3 {
         font-family: var(--menu-font-family), sans-serif;
