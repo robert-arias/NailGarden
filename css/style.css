@@ -376,10 +376,6 @@ ul.nav-items li a:hover span::before {
         background-color: white;
     }
 
-    .product h3 {
-        margin-top: 20px;
-    }
-
     .product-description p {
         width: auto;
         margin: 20px;
