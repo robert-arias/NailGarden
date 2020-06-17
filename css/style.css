@@ -341,7 +341,6 @@ ul.nav-items li a:hover span::before {
     /*3. Products*/
     .products-container {
         padding-top: 50px;
-        flex-direction: column;
         justify-content: none;
     }
 
@@ -371,41 +370,40 @@ ul.nav-items li a:hover span::before {
     }
 
     .product:nth-child(odd) {
-      background-color: white;
-      color: white;
+     background-color: white;
     }
 
     .product h3 {
-        font-family: var(--menu-font-family), sans-serif;
-        font-size: 2em;
-        margin-bottom: 5px;
-        margin-top: 20px;
-        margin-right: 20px;
+     font-family: var(--menu-font-family), sans-serif;
+     font-size: 2em;
+     margin-bottom: 5px;
+     margin-top: 20px;
+     margin-right: 20px;
     }
 
     .product p {
-        width: auto;
-        line-height: 1.3em;
-        margin: 20px;
+     width: auto;
+     line-height: 1.3em;
+     margin: 20px;
     }
 
     .product a {
-        z-index: 1;
-        text-decoration: none;
-        color: #2d170e;
-        padding: 10px 25px;
-        margin: 25px 0 15px 0;
-        position: relative;
-        text-transform: uppercase;
+     z-index: 1;
+     text-decoration: none;
+     color: #2d170e;
+     padding: 10px 25px;
+     margin: 25px 0 15px 0;
+     position: relative;
+     text-transform: uppercase;
     }
 
     .product:nth-child(odd) a {
-        color: white;
-        border-color: white;
+     color: white;
+     border-color: white;
     }
 
     .product:nth-child(odd) img {
-        margin-left: 680px;
+     margin-left: 680px;
     }
 
     .product:nth-child(odd) .product-description {
@@ -414,26 +412,25 @@ ul.nav-items li a:hover span::before {
     }
 
     .product a::before {
-       content: '';
-       z-index: -1;
-       position: absolute;
-       top: 0;
-       bottom: 0;
-       left: 0;
-       right: 0;
-       background-color: #b1a68e;
-       transform-origin: center top;
-       transform: scaleY(0);
-       transition: transform 0.25s ease-in-out;
+     content: '';
+     z-index: -1;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     background-color: #b1a68e;
+     transform-origin: center top;
+     transform: scaleY(0);
+     transition: transform 0.25s ease-in-out;
     }
 
     .product:nth-child(even) a::before {
-        background-color: #d49293;
+     background-color: #d49293;
     }
 
     .product a:hover::before {
-       transform-origin: center bottom;
-       transform: scaleY(1);
+     transform-origin: center bottom;
+     transform: scaleY(1);
     }
-
 }
