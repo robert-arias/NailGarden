@@ -11,6 +11,7 @@
     --active-color: #DE3163;
     --highlighter-color: #f5c1d0;
     --menu-font-family: 'Playfair Display';
+    --top-metric: 76px;
 }
 
 /* Initialize all elements*/
@@ -18,6 +19,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    font-family: var(--logo-font-family), Helvetica, Arial, sans-serif;
 }
 
 /*1. NAV BAR*/
@@ -140,7 +147,7 @@ div.logo::before {
 ul.nav-items {
     position: fixed;
     left: 0;
-    top: 76px;
+    top: var(--top-metric);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,11 +224,6 @@ ul.nav-items li a:hover span::before {
      display: flex;
      flex-direction: column;
      align-items: center;
- }
-
- .products-container > h2 {
-     font-size: 2.2em;
-     padding-bottom: 15px;
  }
 
  .product {
@@ -305,6 +307,54 @@ ul.nav-items li a:hover span::before {
     transform: scaleY(1);
  }
 
+ /*-----------------------------------PRODUCTS FINISHED--------------------------------------*/
+
+ /*4. Reviews*/
+ .reviews-container {
+     position: relative;
+     top: var(--top-metric);
+     background-color: #F2F2E9;
+     padding-top: 15px;
+     padding-bottom: 25px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+ }
+
+ .review {
+     font-family: 'Montserrat', sans-serif;
+     font-size: .8em;
+     width: 80%;
+     background-color: #fff;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     border-radius: 5px;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+     margin-bottom: 15px;
+     position: relative;
+ }
+
+ .review p {
+     width: 80%;
+     color: #898989;
+     margin: 10%;
+ }
+
+ .review p::after {
+     content: '';
+     position: absolute;
+     background-color: #EBEBEB;
+     height: 1px;
+     width: 80%;
+     left: 10%;
+     bottom: 28%;
+ }
+
+ .reviewer-name {
+     margin-bottom: 15px;
+ }
+
 @media screen and (min-width: 1000px) {
     /*1. NAV BAR */
     nav.navigation > div.nav-burger {
@@ -343,7 +393,7 @@ ul.nav-items li a:hover span::before {
         padding-top: 50px;
         justify-content: none;
         max-width: 1200px;
-        margin: 0 auto
+        margin: 0 auto 25px auto;
     }
 
     .product {
@@ -395,4 +445,5 @@ ul.nav-items li a:hover span::before {
      background-color: var(--nav-color);
      left: 180px;
     }
+     /*-----------------------------------PRODUCTS FINISHED--------------------------------------*/
 }
