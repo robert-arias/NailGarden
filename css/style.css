@@ -28,6 +28,13 @@ h2 {
 }
 
 /*1. NAV BAR*/
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 /*Navbar attributes*/
 .navigation {
     font-family: 'Playfair Display', serif;
@@ -37,10 +44,7 @@ h2 {
     padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 100;
 }
 
 /*Logo attributes*/
@@ -216,8 +220,6 @@ ul.nav-items li a:hover span::before {
 
 /*3. Products*/
  .products-container {
-     position: relative;
-     top: 76px;
      width: 100%;
      margin: 0;
      padding-top: 15px;
@@ -310,22 +312,26 @@ ul.nav-items li a:hover span::before {
  /*-----------------------------------PRODUCTS FINISHED--------------------------------------*/
 
  /*4. Reviews*/
+.reviews-section {
+    position: relative;
+    background-color: #F2F2E9;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
  .reviews-container {
-     position: relative;
-     top: var(--top-metric);
-     background-color: #F2F2E9;
-     padding-top: 15px;
-     padding-bottom: 25px;
+     width: 80%;
      display: flex;
-     /*align-items: center;
-     flex-direction: column;*/
      overflow: hidden;
  }
 
  .review {
      font-family: 'Montserrat', sans-serif;
      font-size: .8em;
-     width: 80%;
+     width: 100%;
      flex-shrink: 0;
      background-color: #fff;
      display: flex;
@@ -335,11 +341,11 @@ ul.nav-items li a:hover span::before {
      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
      margin-bottom: 15px;
      position: relative;
+     transition: all .5s ease-out;
  }
 
  .review:not(:last-child) {
      margin-right: 80%;
-     margin-left: auto;
  }
 
  .review p {
@@ -361,6 +367,27 @@ ul.nav-items li a:hover span::before {
  .reviewer-name {
      margin-bottom: 15px;
  }
+ 
+ #btnLeft,
+ #btnRight {
+     position: absolute;
+     top: 50%;
+     color: gray;
+     font-size: 1em;
+ }
+
+ #btnLeft {
+    left: 10px;
+ }
+
+#btnRight {
+    right: 10px;
+}
+
+#btnLeft:hover,
+#btnRight:hover {
+    opacity: .8;
+}
 
 @media screen and (min-width: 1000px) {
     /*1. NAV BAR */
