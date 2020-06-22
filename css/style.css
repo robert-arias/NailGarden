@@ -367,7 +367,7 @@ ul.nav-items li a:hover span::before {
  .reviewer-name {
      margin-bottom: 15px;
  }
- 
+
  #btnLeft,
  #btnRight {
      position: absolute;
@@ -488,4 +488,31 @@ ul.nav-items li a:hover span::before {
      left: 180px;
     }
      /*-----------------------------------PRODUCTS FINISHED--------------------------------------*/
+/*4.REVIEWS*/
+
+      .reviews-container {
+          width: 40%;
+          height: 300px;
+      }
+
+      .review p {
+          margin-top: 100px;
+      }
+
+      .reviewer-name {
+          margin-top: 20px;
+      }
+
+      #btnLeft {
+         left: 60px;
+      }
+
+     #btnRight {
+         right: 60px;
+     }
+  /*--------------------------------------------REVIEWS FINISHED------------------------------------*/
+  /*5. Maps*/
+  .maps {
+      margin: 80px;
+  }
 }
