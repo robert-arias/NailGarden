@@ -1,32 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import 'variables.css';
+@import 'reset.css';
 @import 'header.css';
-
-/*Variables*/
-:root {
-    --nav-color: #eba2a3;
-    --logo-color: #fff;
-    --menu-font-color: #fff;
-    --logo-font-family: 'Source Sans Pro';
-    --active-color: #DE3163;
-    --highlighter-color: #f5c1d0;
-    --menu-font-family: 'Playfair Display';
-    --top-metric: 76px;
-}
-
-/* Initialize all elements*/
-*, *:before, *:after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
-    font-family: var(--logo-font-family), Helvetica, Arial, sans-serif;
-}
+@import 'footer.css';
 
 /*3. Products*/
  .products-container {
@@ -207,29 +185,6 @@ h2 {
     margin: 15px;
 }
 /*-------------------------------------------MAPS FINISHED-----------------------------------------*/
-/*6. Footer*/
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--nav-color);
-    height: 76px;
-    padding: 10px 20px; 
-}
-
-.social-media li {
-    display: inline-block;
-    font-size: 1.5em;
-}
-
-.social-media li:not(:last-child) {
-    margin-right: 7px;
-}
-
-.social-media a {
-    color: white;
-    text-decoration: none;
-}
 
 @media screen and (min-width: 1000px) {
     /*3. Products*/
