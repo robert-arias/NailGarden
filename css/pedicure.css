@@ -21,6 +21,12 @@
   line-height: 1.3em;
 }
 
+.pedicure_container h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
 /*--------------Types peducure----------------*/
 .carrusel-container{
   position: relative;
@@ -68,7 +74,6 @@
   display: flex;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: .8em;
   width: 100%;
   flex-shrink: 0;
   flex-direction: column;
@@ -78,10 +83,11 @@
 }
 
 .type-description p{
-  width: 80%;
-  line-height: 1.3em;
   margin: 10px;
   text-align: center;
+  width: 90%;
+  line-height: 1.3em;
+  font-size: 1em;
 }
 
 .type-description:not(:last-child) {
@@ -110,10 +116,9 @@
 }
 
 .carrusel-container h3 {
-  font-family: var(--menu-font-family), sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
-  margin-bottom: 10px;
-  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 
@@ -146,7 +151,7 @@
   .type-description{
     width: 100%;
   }
-  
+
   .arrowLeft,
   .arrowRight {
     position: absolute;
