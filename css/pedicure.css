@@ -30,7 +30,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-top: 15px;
   padding-bottom: 25px;
 }
 
@@ -51,7 +50,7 @@
 
 .type img{
   width: 100%;
-  height: 180px;
+  height: 200px;
   margin-bottom: 10px;
 }
 
@@ -76,26 +75,87 @@
 }
 
 .type-description:not(:last-child) {
-    margin-right: 80%;
+  margin-right: 80%;
 }
 
 .arrowLeft,
 .arrowRight {
-    position: absolute;
-    top: 50%;
-    color: gray;
-    font-size: 1em;
+  position: absolute;
+  top: 50%;
+  color: gray;
+  font-size: 1em;
 }
 
 .arrowLeft {
-   left: 10px;
+  left: 10px;
 }
 
 .arrowRight {
-   right: 10px;
+  right: 10px;
 }
 
 .arrowLeft:hover,
 .arrowRight:hover {
-   opacity: .8;
+  opacity: .8;
+}
+
+.carrusel_container h3 {
+  font-family: var(--menu-font-family), sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+@media screen and (min-width: 1000px) {
+  /* ------------Description pedicure-------------*/
+  .pedicure_container{
+    padding-top: 30px;
+  }
+
+  .pedicure_description{
+    width: 60%;
+    text-align: justify;
+  }
+  /*--------------Types peducure----------------*/
+  .carrusel_container{
+    padding-top: 30px;
+  }
+
+  .type{
+    font-size: 1em;
+    width: 40%;
+    margin-bottom: 30px;
+  }
+
+  .type img{
+    width: 100%;
+    height: 350px;
+  }
+
+  .type-description{
+    width: 100%;
+  }
+  
+  .arrowLeft,
+  .arrowRight {
+    position: absolute;
+    top: 50%;
+    color: gray;
+    font-size: 1em;
+  }
+
+  .arrowLeft {
+    left: 10px;
+  }
+
+  .arrowRight {
+    right: 10px;
+  }
+
+  .arrowLeft:hover,
+  .arrowRight:hover {
+    opacity: .8;
+  }
+
 }
