@@ -19,6 +19,7 @@
 .pedicure_description{
   width: 90%;
   line-height: 1.3em;
+  font-size: 1.1em;
 }
 
 .pedicure_container h3{
@@ -121,6 +122,86 @@
   margin-bottom: 5px;
 }
 
+/*--------------galery pedicure----------------*/
+
+.galery-container{
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pedicure-galery-container {
+  width: 80%;
+  display: flex;
+  overflow: hidden;
+}
+
+.galery {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all .5s ease-out;
+}
+
+.galery:not(:last-child) {
+  margin-right: 80%;
+}
+
+.galery img{
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.arrow-galery-Left,
+.arrow-galery-Right {
+  position: absolute;
+  top: 50%;
+  color: gray;
+  font-size: 1em;
+}
+
+.arrow-galery-Left {
+  left: 10px;
+}
+
+.arrow-galery-Right {
+  right: 10px;
+}
+
+.arrow-galery-Left:hover,
+.arrow-galery-Right:hover {
+  opacity: .5;
+}
+
+/* ------------pedicure appointment-------------*/
+.pedicure-appointment{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+}
+
+.pedicure-appointment-description{
+  width: 90%;
+  line-height: 1.3em;
+}
+
+.pedicure-appointment h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
 
 @media screen and (min-width: 1000px) {
   /* ------------Description pedicure-------------*/
@@ -132,20 +213,21 @@
     width: 60%;
     text-align: justify;
   }
-  /*--------------Types peducure----------------*/
-  .carrusel_container{
-    padding-top: 30px;
+
+/*types description*/
+  .carrusel-container{
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
 
-  .type{
-    font-size: 1em;
-    width: 40%;
-    margin-bottom: 30px;
+  .type {
+    font-size: .9em;
+    width: 50%;
   }
 
   .type img{
-    width: 100%;
-    height: 350px;
+    height: 300px;
+    margin-bottom: 25px;
   }
 
   .type-description{
@@ -154,23 +236,45 @@
 
   .arrowLeft,
   .arrowRight {
-    position: absolute;
-    top: 50%;
-    color: gray;
     font-size: 1em;
   }
 
   .arrowLeft {
-    left: 10px;
+    left: 50px;
   }
 
   .arrowRight {
-    right: 10px;
+    right: 50px;
   }
 
-  .arrowLeft:hover,
-  .arrowRight:hover {
-    opacity: .8;
+  /*--------------galery pedicure----------------*/
+
+  .galery img{
+    width: 50%;
+    height: 400px;
   }
 
+  .arrow-galery-Left {
+    left: 50px;
+  }
+
+  .arrow-galery-Right {
+    right: 50px;
+  }
+
+  /* ------------pedicure appointment-------------*/
+  .pedicure-appointment{
+    width: 100%;
+    margin: 0;
+    padding-top: 30px;
+  }
+
+  .pedicure-appointment-description{
+    width: 60%;
+    text-align: justify;
+  }
+
+  .pedicure-appointment-description{
+    margin-bottom: 10%;
+  }
 }

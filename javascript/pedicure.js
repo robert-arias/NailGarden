@@ -5,6 +5,7 @@ $('.nav-burger').click(function(){
       $(".logo").toggleClass("open");
 });
 
+//Type pedicure
 var count = $('.pedicure-type-container').children().length;
 const size = 180;
 let counter = 1;
@@ -27,5 +28,31 @@ $('.arrowRight').click(function(){
       else {
             $('.type').css('transform', 'translateX(' + 0 + '%)');
             counter = 1;
+      }
+});
+
+//galery pedicure
+var countGalery = $('.pedicure-galery-container').children().length;
+const sizeGalery = 180;
+let counterGalery = 1;
+$('.arrow-galery-Left').click(function(){
+      if(counterGalery > 1) {
+            --counterGalery;
+            $('.galery').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
+      }
+      else {
+            counterGalery = countGalery;
+            $('.galery').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
+      }
+});
+
+$('.arrow-galery-Right').click(function(){
+      if(counterGalery < countGalery) {
+            $('.galery').css('transform', 'translateX(' + -size*counterGalery + '%)');
+            counterGalery++;
+      }
+      else {
+            $('.galery').css('transform', 'translateX(' + 0 + '%)');
+            counterGalery = 1;
       }
 });
