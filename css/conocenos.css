@@ -22,6 +22,11 @@
   width: 75%;
   margin-bottom: 25px;
 }
+.knowUs-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .knowUs img {
   width: 100%;
   height: auto;
@@ -39,6 +44,11 @@
   width: auto;
   line-height: 1.3em;
 }
+.knowUs-schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .knowUs-schedule p{
   align-items: center;
   width: auto;
@@ -48,10 +58,13 @@
   font-family: var(--menu-font-family), sans-serif;
   font-size: 2em;
   margin-bottom: 5px;
+}
+.knowUs-Contact {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .knowUs-Contact p{
-  align-items: center;
   width: auto;
   font-size: 1em;
 }
@@ -59,7 +72,6 @@
   font-family: var(--menu-font-family), sans-serif;
   font-size: 2em;
   margin-bottom: 5px;
-  align-items: center;
 }
 .information input{
   width: 260px;
@@ -72,4 +84,67 @@
 }
 
 @media screen and (min-width: 1000px) {
+  .knowUs-container {
+    padding-top: 50px;
+    justify-content: none;
+    max-width: 1200px;
+    margin: 0 auto 25px auto;
+  }
+  .knowUs {
+    position: relative;
+    font-size: .9em;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .knowUs img {
+    width: 600px;
+    margin-left: 80px;
+    margin-bottom: 0;
+  }
+  .knowUs-container:nth-child(even) {
+   background-color: #F2F2E9;
+  }
+  .knowUs-description  h3 {
+    font-family: var(--menu-font-family), sans-serif;
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+  .knowUs-description  p {
+    width: auto;
+    line-height: 1.3em;
+  }
+  .knowUs-schedule p{
+    align-items: center;
+    width: auto;
+    font-size: .7em;
+  }
+  .knowUs-schedule h3{
+    font-family: var(--menu-font-family), sans-serif;
+    font-size: 2em;
+    margin-bottom: 5px;
+    align-items: center;
+  }
+  .knowUs-Contact p{
+    align-items: center;
+    width: auto;
+    font-size: 1em;
+  }
+  .knowUs-Contact h3{
+    font-family: var(--menu-font-family), sans-serif;
+    font-size: 2em;
+    margin-bottom: 5px;
+    align-items: center;
+  }
+  .information input{
+    width: 260px;
+  }
+  .information textarea{
+    width: 260px;
+  }
+  .knowUs{
+    align-items: center;
+  }
 }
