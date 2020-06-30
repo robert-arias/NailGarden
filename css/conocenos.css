@@ -81,7 +81,7 @@
 }
 @media screen and (min-width: 1000px) {
   .knowUs {
-      position: relative;
+    position: relative;
       font-size: .9em;
       width: 100%;
   }
@@ -96,44 +96,41 @@
   .knowUs img {
      width: 600px;
      margin-left: 650px;
-     margin-bottom: 0;
  }
   .knowUs-description  h3 {
       font-size: 2.5em;
       margin: 20px;
   }
   .knowUs-description  p {
-    width: auto;
     margin: 20px;
     padding: 0 20px;
+      line-height: 1.8em;
     }
-  .knowUs:nth-child(even) img {
-        margin-left: 10px;
+  #schedule{
+      margin-left: 30px;
+      margin-top: 30px;
   }
   .knowUs-schedule{
     margin-left: 700px;
     margin-top: 10px;
-    margin-bottom: 140px;
-  }
-  .knowUs-schedule p {
-      width: 80%;
-      margin-left: 70px;
-      margin-bottom: 230px;
+    margin-bottom: 10px;
   }
   .knowUs-schedule  h3 {
       margin-top: -400px;
-      font-size: 2em;
-      margin-left: 200px;
+  }
+  .knowUs-schedule p {
+      width: 80%;
+      margin-bottom: 230px;
+      font-size: 1.3em;
+      margin-bottom: 0;
   }
   .knowUs-Contact  h3 {
-      margin-bottom: 20px;
       align-items: center;
       margin-top: 20px;
   }
   .knowUs-Contact  p {
       width: 600px;
       line-height: 1.8em;
-      align-items: center;
   }
   .information input{
   width: 400px;
