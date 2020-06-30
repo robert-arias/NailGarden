@@ -79,10 +79,6 @@
 .information textarea{
   width: 260px;
 }
-.knowUs{
-  align-items: center;
-}
-
 @media screen and (min-width: 1000px) {
   .knowUs-container {
     padding-top: 50px;
@@ -104,8 +100,14 @@
     margin-left: 80px;
     margin-bottom: 0;
   }
-  .knowUs-container:nth-child(even) {
-   background-color: #F2F2E9;
+  .knowUs-description {
+      position: absolute;
+      background-color: #ddcfb1;
+      top: 50px;
+      left: 620px;
+      width: 550px;
+      height: 300px;
+      justify-content: center;
   }
   .knowUs-description  h3 {
     font-family: var(--menu-font-family), sans-serif;
@@ -139,10 +141,10 @@
     align-items: center;
   }
   .information input{
-    width: 260px;
+    width: 400px;
   }
   .information textarea{
-    width: 260px;
+    width: 400px;
   }
   .knowUs{
     align-items: center;
