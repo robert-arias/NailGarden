@@ -99,6 +99,7 @@
   flex-direction: column;
   width: 75%;
   margin-bottom: 25px;
+  align-items: center;
 }
 .knowUs-Contact  h3 {
   font-family: var(--menu-font-family), sans-serif;
@@ -108,7 +109,11 @@
 .knowUs-Contact  p {
   width: auto;
   line-height: 1.3em;
+  width: 250px;
   text-align: justify;
+}
+.information{
+  align-items: center;
 }
 .information input{
   width: 260px;
@@ -116,10 +121,8 @@
 .information textarea{
   width: 260px;
 }
-.knowUs-Contact button{
-align-content: center;
+.btn{
 width: 100px;
-
 }
 /*
 @media screen and (min-width: 1000px) {
