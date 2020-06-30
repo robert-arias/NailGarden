@@ -53,6 +53,7 @@
   align-items: center;
   width: auto;
   font-size: .7em;
+  line-height: 1.8em;
 }
 .knowUs-schedule h3{
   font-family: var(--menu-font-family), sans-serif;
