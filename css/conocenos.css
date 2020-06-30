@@ -80,73 +80,65 @@
   width: 260px;
 }
 @media screen and (min-width: 1000px) {
-  .knowUs-container {
-    padding-top: 50px;
-    justify-content: none;
-    max-width: 1200px;
-    margin: 0 auto 25px auto;
-  }
   .knowUs {
-    position: relative;
-    font-size: .9em;
-    display: block;
-    width: 100%;
-    background-color: transparent;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .knowUs img {
-    width: 600px;
-    margin-left: 80px;
-    margin-bottom: 0;
+      position: relative;
+      font-size: .9em;
+      width: 100%;
   }
   .knowUs-description {
       position: absolute;
-      background-color: #ddcfb1;
       top: 50px;
-      left: 620px;
+      left: 100px;
       width: 550px;
       height: 300px;
       justify-content: center;
   }
+  .knowUs img {
+     width: 600px;
+     margin-left: 650px;
+     margin-bottom: 0;
+ }
   .knowUs-description  h3 {
-    font-family: var(--menu-font-family), sans-serif;
-    font-size: 2em;
-    margin-bottom: 5px;
+      font-size: 2.5em;
+      margin: 20px;
   }
   .knowUs-description  p {
     width: auto;
-    line-height: 1.3em;
+    margin: 20px;
+    padding: 0 20px;
+    }
+  .knowUs:nth-child(even) img {
+        margin-left: 10px;
   }
-  .knowUs-schedule p{
-    align-items: center;
-    width: auto;
-    font-size: .7em;
+  .knowUs-schedule{
+    margin-left: 700px;
+    margin-top: 10px;
+    margin-bottom: 140px;
   }
-  .knowUs-schedule h3{
-    font-family: var(--menu-font-family), sans-serif;
-    font-size: 2em;
-    margin-bottom: 5px;
-    align-items: center;
+  .knowUs-schedule p {
+      width: 80%;
+      margin-left: 70px;
+      margin-bottom: 230px;
   }
-  .knowUs-Contact p{
-    align-items: center;
-    width: auto;
-    font-size: 1em;
+  .knowUs-schedule  h3 {
+      margin-top: -400px;
+      font-size: 2em;
+      margin-left: 200px;
   }
-  .knowUs-Contact h3{
-    font-family: var(--menu-font-family), sans-serif;
-    font-size: 2em;
-    margin-bottom: 5px;
-    align-items: center;
+  .knowUs-Contact  h3 {
+      margin-bottom: 20px;
+      align-items: center;
+      margin-top: 20px;
+  }
+  .knowUs-Contact  p {
+      width: 600px;
+      line-height: 1.8em;
+      align-items: center;
   }
   .information input{
-    width: 400px;
+  width: 400px;
   }
   .information textarea{
-    width: 400px;
-  }
-  .knowUs{
-    align-items: center;
+  width: 400px;
   }
 }
