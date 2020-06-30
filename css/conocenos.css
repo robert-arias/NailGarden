@@ -85,12 +85,12 @@
 
 /*our history contact*/
 .Contact-container {
-  display:flex;
-  flex-direction: column;
-  align-content: center;
   width: 100%;
   margin: 0;
   padding-top: 15px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 .knowUs-Contact {
   font-family: 'Montserrat', sans-serif;
@@ -115,7 +115,13 @@
 }
 .information textarea{
   width: 260px;
-}/*
+}
+.knowUs-Contact button{
+align-content: center;
+width: 100px;
+
+}
+/*
 @media screen and (min-width: 1000px) {
   .knowUs {
     position: relative;
