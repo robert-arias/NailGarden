@@ -11,9 +11,8 @@
   margin: 0;
   padding-top: 15px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 .knowUs {
   font-family: 'Montserrat', sans-serif;
@@ -42,10 +41,35 @@
   width: 90%;
   line-height: 1.3em;
 }
-.knowUs-schedule{
-  justify-content: center;
+.knowUs-schedule p{
   align-items: center;
-  width: 600px;
+  width: auto;
+  font-size: .7em;
+}
+.knowUs-schedule h3{
+  font-family: var(--menu-font-family), sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.knowUs-Contact p{
+  align-items: center;
+  width: auto;
+  font-size: 1em;
+}
+.knowUs-Contact h3{
+  font-family: var(--menu-font-family), sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.information input{
+  justify-content: center;
+  width: 260px;
+}
+.information textarea{
+  justify-content: center;
+  width: 260px;
 }
 
 @media screen and (min-width: 1000px) {
