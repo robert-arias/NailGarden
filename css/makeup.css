@@ -14,6 +14,7 @@
   width: 100%;
   margin: 0;
   padding-top: 15px;
+  text-align: justify;
 }
 
 .makeup_description{
@@ -278,7 +279,6 @@
 
   .makeup-appointment-description{
     width: 60%;
-    text-align: justify;
     margin-bottom: 10%;
     font-size: 1.1em;
   }
