@@ -193,11 +193,12 @@ width: 100px;
   /*our history contact*/
   .about-us-Contact {
     width: 100%;
+    margin-bottom: 30px;
   }
   .about-us-Contact  h3 {
     font-family: var(--menu-font-family), sans-serif;
     font-size: 3em;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
   }
   .about-us-Contact  p {
     width: auto;
