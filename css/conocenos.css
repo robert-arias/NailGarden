@@ -6,7 +6,7 @@
 @import 'header.css';
 @import 'footer.css';
 /*our history description*/
-.knowUs-container {
+.about-us-container {
   width: 100%;
   margin: 0;
   padding-top: 15px;
@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
 }
-.knowUs {
+.about-us {
   font-family: 'Montserrat', sans-serif;
   font-size: .8em;
   display: flex;
@@ -22,22 +22,22 @@
   width: 75%;
   margin-bottom: 25px;
 }
-.knowUs-description {
+.about-us-description {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.knowUs img {
+.about-us img {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
-.knowUs-description  h3 {
+.about-us-description  h3 {
   font-family: var(--menu-font-family), sans-serif;
   font-size: 2em;
   margin-bottom: 5px;
 }
-.knowUs-description  p {
+.about-us-description  p {
   width: auto;
   line-height: 1.3em;
   text-align: justify;
@@ -60,7 +60,7 @@
   width: 75%;
   margin-bottom: 25px;
 }
-.knowUs-schedule {
+.about-us-schedule {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,13 +71,13 @@
   margin-bottom: 30px;
   margin-top: 15px;
 }
-.knowUs-schedule p{
+.about-us-schedule p{
   align-items: center;
   width: auto;
   font-size: .7em;
   line-height: 2.5em;
 }
-.knowUs-schedule h3{
+.about-us-schedule h3{
   font-family: var(--menu-font-family), sans-serif;
   font-size: 2em;
   margin-bottom: 5px;
@@ -92,7 +92,7 @@
   flex-direction: column;
   align-items: center;
 }
-.knowUs-Contact {
+.about-us-Contact {
   font-family: 'Montserrat', sans-serif;
   font-size: .8em;
   display: flex;
@@ -101,12 +101,12 @@
   margin-bottom: 25px;
   align-items: center;
 }
-.knowUs-Contact  h3 {
+.about-us-Contact  h3 {
   font-family: var(--menu-font-family), sans-serif;
   font-size: 2em;
   margin-bottom: 5px;
 }
-.knowUs-Contact  p {
+.about-us-Contact  p {
   width: auto;
   line-height: 1.3em;
   width: 250px;
@@ -124,64 +124,38 @@
 .btn{
 width: 100px;
 }
-/*
+
 @media screen and (min-width: 1000px) {
+  .knowUs-container {
+    width: 100%;
+    padding-top: 30px;
+  }
   .knowUs {
-    position: relative;
-      font-size: .9em;
-      width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8em;
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-bottom: 25px;
   }
   .knowUs-description {
-      position: absolute;
-      top: 50px;
-      left: 100px;
-      width: 550px;
-      height: 300px;
-      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
   .knowUs img {
-     width: 600px;
-     margin-left: 650px;
- }
+    width: 40%;
+    margin-bottom: 10px;
+    margin-left: 650px;
+  }
   .knowUs-description  h3 {
-      font-size: 2.5em;
-      margin: 20px;
+    font-family: var(--menu-font-family), sans-serif;
+    font-size: 2em;
+    margin-bottom: 5px;
   }
   .knowUs-description  p {
-    margin: 20px;
-    padding: 0 20px;
-      line-height: 1.8em;
-    }
-  #schedule{
-      margin-left: 30px;
-      margin-top: 30px;
+    width: auto;
+    line-height: 1.3em;
+    text-align: justify;
   }
-  .knowUs-schedule{
-    margin-left: 700px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .knowUs-schedule  h3 {
-      margin-top: -400px;
-  }
-  .knowUs-schedule p {
-      width: 80%;
-      margin-bottom: 230px;
-      font-size: 1.3em;
-      margin-bottom: 0;
-  }
-  .knowUs-Contact  h3 {
-      align-items: center;
-      margin-top: 20px;
-  }
-  .knowUs-Contact  p {
-      width: 600px;
-      line-height: 1.8em;
-  }
-  .information input{
-  width: 400px;
-  }
-  .information textarea{
-  width: 400px;
-  }
-}*/
+}
