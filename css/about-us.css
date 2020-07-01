@@ -136,27 +136,18 @@ width: 100px;
     margin-bottom: 40px;
     margin-top: 90px;
   }
-  .about-us-description {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
   .about-us img {
     width: 600px;
     margin-left: 80px;
-    margin-bottom: 0
   }
   .about-us-description  h3 {
-    font-family: var(--menu-font-family), sans-serif;
     font-size: 3em;
     margin-top: -80px;
     margin-bottom: 25px;
   }
   .about-us-description  p {
-    width: auto;
     font-size: 1.5em;
     line-height: 1.5em;
-    text-align: justify;
   }
   /*our history schedule*/
   .schedule {
@@ -166,9 +157,6 @@ width: 100px;
     margin-top: 90px;
   }
   .about-us-schedule {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-left: 250px;
   }
   .schedule img {
@@ -176,18 +164,12 @@ width: 100px;
     margin-left: 60px;
     margin-top: -40px;
     margin-bottom: 0
-
   }
   .about-us-schedule p{
-    align-items: center;
-    width: auto;
     font-size: 1.2em;
-    line-height: 2.5em;
   }
   .about-us-schedule h3{
-    font-family: var(--menu-font-family), sans-serif;
     font-size: 3em;
-    margin-bottom: 5px;
     margin-top: -50px;
   }
   /*our history contact*/
@@ -196,19 +178,12 @@ width: 100px;
     margin-bottom: 30px;
   }
   .about-us-Contact  h3 {
-    font-family: var(--menu-font-family), sans-serif;
     font-size: 3em;
     margin-bottom: 25px;
   }
   .about-us-Contact  p {
-    width: auto;
-    line-height: 1.3em;
     font-size: 1.1em;
     width: 400px;
-    text-align: justify;
-  }
-  .information{
-    align-items: center;
   }
   .information input{
     width: 400px;
@@ -218,7 +193,6 @@ width: 100px;
     width: 400px;
   }
   .btn{
-  width: 100px;
   height: 30px;
   }
 
