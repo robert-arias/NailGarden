@@ -126,11 +126,11 @@ width: 100px;
 }
 
 @media screen and (min-width: 1000px) {
-  .knowUs-container {
+  .about-us-container {
     width: 100%;
     padding-top: 30px;
   }
-  .knowUs {
+  .about-us {
     font-family: 'Montserrat', sans-serif;
     font-size: .8em;
     display: flex;
@@ -138,22 +138,22 @@ width: 100px;
     width: 75%;
     margin-bottom: 25px;
   }
-  .knowUs-description {
+  .about-us-description {
       display: flex;
       flex-direction: column;
       align-items: center;
   }
-  .knowUs img {
+  .about-us img {
     width: 40%;
     margin-bottom: 10px;
     margin-left: 650px;
   }
-  .knowUs-description  h3 {
+  .about-us-description  h3 {
     font-family: var(--menu-font-family), sans-serif;
     font-size: 2em;
     margin-bottom: 5px;
   }
-  .knowUs-description  p {
+  .about-us-description  p {
     width: auto;
     line-height: 1.3em;
     text-align: justify;
