@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import 'variables.css';
+@import 'reset.css';
+@import 'header.css';
+@import 'footer.css';
+/*our history description*/
+.about-us-container {
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-bottom: 25px;
+}
+.about-us-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-us img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.about-us-description  h3 {
+  font-family: var(--menu-font-family), sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+.about-us-description  p {
+  width: auto;
+  line-height: 1.3em;
+  text-align: justify;
+}
+/*our history schedule*/
+.schedule-container {
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F2E9;
+}
+.schedule {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-bottom: 25px;
+}
+.about-us-schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.schedule img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.about-us-schedule p{
+  align-items: center;
+  width: auto;
+  font-size: .7em;
+  line-height: 2.5em;
+}
+.about-us-schedule h3{
+  font-family: var(--menu-font-family), sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+/*our history contact*/
+.Contact-container {
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-us-Contact {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-bottom: 25px;
+  align-items: center;
+}
+.about-us-Contact  h3 {
+  font-family: var(--menu-font-family), sans-serif;
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+.about-us-Contact  p {
+  width: auto;
+  line-height: 1.3em;
+  width: 250px;
+  text-align: justify;
+}
+.information{
+  align-items: center;
+}
+.information input{
+  width: 260px;
+}
+.information textarea{
+  width: 260px;
+}
+.btn{
+width: 100px;
+}
+
+@media screen and (min-width: 1000px) {
+  /*our history description*/
+  .about-us-container{
+    margin-top: 10px;
+  }
+  .about-us {
+    flex-direction: row-reverse;
+    width: 85%;
+    margin-bottom: 40px;
+    margin-top: 90px;
+  }
+  .about-us-description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .about-us img {
+    width: 600px;
+    margin-left: 80px;
+    margin-bottom: 0
+  }
+  .about-us-description  h3 {
+    font-family: var(--menu-font-family), sans-serif;
+    font-size: 3em;
+    margin-top: -80px;
+    margin-bottom: 25px;
+  }
+  .about-us-description  p {
+    width: auto;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: justify;
+  }
+  /*our history schedule*/
+  .schedule {
+    flex-direction: row;
+    width: 85%;
+    margin-bottom: 60px;
+    margin-top: 90px;
+  }
+  .about-us-schedule {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 250px;
+  }
+  .schedule img {
+    width: 300px;
+    margin-left: 60px;
+    margin-top: -40px;
+    margin-bottom: 0
+
+  }
+  .about-us-schedule p{
+    align-items: center;
+    width: auto;
+    font-size: 1.2em;
+    line-height: 2.5em;
+  }
+  .about-us-schedule h3{
+    font-family: var(--menu-font-family), sans-serif;
+    font-size: 3em;
+    margin-bottom: 5px;
+    margin-top: -50px;
+  }
+  /*our history contact*/
+  .about-us-Contact {
+    width: 100%;
+  }
+  .about-us-Contact  h3 {
+    font-family: var(--menu-font-family), sans-serif;
+    font-size: 3em;
+    margin-bottom: 5px;
+  }
+  .about-us-Contact  p {
+    width: auto;
+    line-height: 1.3em;
+    font-size: 1.1em;
+    width: 400px;
+    text-align: justify;
+  }
+  .information{
+    align-items: center;
+  }
+  .information input{
+    width: 400px;
+    height: 35px;
+  }
+  .information textarea{
+    width: 400px;
+  }
+  .btn{
+  width: 100px;
+  height: 30px;
+  }
+
+}
