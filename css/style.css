@@ -6,11 +6,67 @@
 @import 'header.css';
 @import 'footer.css';
 
+/*--------------carousel ----------------*/
+
+.carousel-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-galery-container {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  transition: all .5s ease-out;
+}
+
+.carousel:not(:last-child) {
+  margin-right: 80%;
+}
+
+.carousel img{
+  width: 100%;
+  height: 90%;
+  transition: all .5s ease-out;
+}
+
+.arrow-carousel-Left,
+.arrow-carousel-Right {
+  position: absolute;
+  top: 40%;
+  color: gray;
+  font-size: 1em;
+}
+
+.arrow-carousel-Left {
+  left: 5px;
+}
+
+.arrow-carousel-Right {
+  right: 5px;
+}
+
+.arrow-carousel-Left:hover,
+.arrow-carousel-Right:hover {
+  opacity: .5;
+}
+
+
 /*3. Products*/
  .products-container {
      width: 100%;
      margin: 0;
-     padding-top: 15px;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -187,9 +243,29 @@
 /*-------------------------------------------MAPS FINISHED-----------------------------------------*/
 
 @media screen and (min-width: 1000px) {
+
+  /*--------------galery pedicure----------------*/
+
+    .carousel img{
+        width: 100%;
+        height: 60%;
+    }
+
+    .arrow-carousel-Left,
+    .arrow-carousel-Right {
+      top: 31%;
+    }
+
+    .arrow-carousel-Left {
+        left: 20px;
+    }
+
+    .arrow-carousel-Right {
+        right: 20px;
+    }
+
     /*3. Products*/
     .products-container {
-        padding-top: 50px;
         justify-content: none;
         max-width: 1200px;
         margin: 0 auto 25px auto;

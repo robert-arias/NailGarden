@@ -29,3 +29,29 @@ $('#btnRight').click(function(){
             counter = 1;
       }
 });
+
+//galery carousel
+var countGalery = $('.carousel-galery-container').children().length;
+const sizeGalery = 180;
+let counterGalery = 1;
+$('.arrow-carousel-Left').click(function(){
+      if(counterGalery > 1) {
+            --counterGalery;
+            $('.carousel').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
+      }
+      else {
+            counterGalery = countGalery;
+            $('.carousel').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
+      }
+});
+
+$('.arrow-carousel-Right').click(function(){
+      if(counterGalery < countGalery) {
+            $('.carousel').css('transform', 'translateX(' + -size*counterGalery + '%)');
+            counterGalery++;
+      }
+      else {
+            $('.carousel').css('transform', 'translateX(' + 0 + '%)');
+            counterGalery = 1;
+      }
+});
