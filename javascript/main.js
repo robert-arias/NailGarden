@@ -5,6 +5,7 @@ $('.nav-burger').click(function(){
       $(".logo").toggleClass("open");
 });
 
+//reviews
 var count = $('.reviews-container').children().length;
 const size = 180;
 let counter = 1;
@@ -34,6 +35,7 @@ $('#btnRight').click(function(){
 var countGalery = $('.carousel-galery-container').children().length;
 const sizeGalery = 180;
 let counterGalery = 1;
+
 $('.arrow-carousel-Left').click(function(){
       if(counterGalery > 1) {
             --counterGalery;
