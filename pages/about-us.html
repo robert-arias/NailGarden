@@ -38,6 +38,11 @@
                          es la satisfaccion de  nuestros clientes. Contamos con más de 5 años de experiencia brindando un servicio de alta calidad,
                          con precios realmente cómodos, gran variedad de diseños, colores y texturas.
                     </p>
+                    <p>
+                      Todo este crecimiento no hubiese sido posible sin el apoyo de nuestros clientes que son parte de la familia de NailGarden.
+                      De manera que, si estás buscando el lugar perfecto para tus uñas y cuidado personal no busques más, que ya lo has encontrado,
+                      se llama NailGarden con un excelente personal capacitado.
+                    </p>
                 </div>
               </div>
             </article>
@@ -47,31 +52,52 @@
                   <div class="about-us-schedule">
                     <h3>Horario</h3>
                   <p>
-                       Lunes  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   .........................................................................&nbsp;8 am - 5 pm <br>
-                       Martes   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;........................................................................&nbsp;8 am - 5 pm <br>
-                       Miércoles  &nbsp;........................................................................&nbsp;8 am - 5 pm <br>
-                       Jueves    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.........................................................................8 am - 5 pm <br>
-                       Viernes   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.........................................................................8 am - 5 pm <br>
-                       Sábado    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.........................................................................8 am - 5 pm <br>
-                       Domingo &nbsp;..........................................................................&nbsp;&nbsp;Cerrado<br>
+                       Lunes  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   .................................................................&nbsp;8 am - 5 pm <br>
+                       Martes   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;................................................................&nbsp;8 am - 5 pm <br>
+                       Miércoles  &nbsp;................................................................&nbsp;8 am - 5 pm <br>
+                       Jueves    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.................................................................8 am - 5 pm <br>
+                       Viernes   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.................................................................8 am - 5 pm <br>
+                       Sábado    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.................................................................8 am - 5 pm <br>
+                       Domingo &nbsp;..................................................................&nbsp;&nbsp;Cerrado<br>
                   </p>
                 </div>
               </div>
             </article>
-            <article class="Contact-container">
-                  <div class="about-us-Contact">
-                    <h3>Contáctenos</h3>
-                  <p>
-                    Si estas interesado o interesada en nuestros servicios, o tienes alguna duda de precios u ofertas no dudes en contactarnos  <br> <br>
-                  </p>
-                  <div class="information">
-                    <input type="text" size="50" maxlength="15" placeholder="Nombre" name="name"><br><br>
-                    <input type="text" size="50" maxlength="15" placeholder="Correo electrónico o número telefóno" name="mailphone"><br><br>
-                    <input type="text" size="50" maxlength="15" placeholder="Asunto" name="affair"><br><br>
-                    <textarea name="comentarios" rows="10" placeholder="Mensaje" cols="40"></textarea><br><br>
-                  </div>
-                  <button type="button" class="btn">Enviar mensaje</button>
-              </div>
+            <article class="contact-container">
+              <h1 class="form__title">Contactanos</h1>
+
+              <p class="form__paragraph">
+                 Si estás interesada en nuestros servicios o tenés alguna duda acerca nuestros precios u ofertas, no dudés en contactarnos.
+              </p>
+
+              <form class="form" action="/contact" method="POST">
+
+                <div class="inputcontainer">
+                    <div class="styleinputcontainer">
+                        <input class="styleinputcontainer__input styleinputcontainer__input--name" type="text" name="name" placeholder="Nombre completo">
+                        <label class="styleinputcontainer__label" for="name">Nombre completo</label>
+                    </div>
+                
+                    <div class="styleinputcontainer">
+                        <input class="styleinputcontainer__input styleinputcontainer__input--email" type="text" name="contact" placeholder="Correo electrónico o número telefónico">
+                        <label class="styleinputcontainer__label" for="contact">Correo electrónico o número telefónico</label>
+                    </div>
+                
+                    <div class="styleinputcontainer">
+                        <input class="styleinputcontainer__input styleinputcontainer__input--password" type="text" name="subject" autocomplete="off" placeholder="Asunto">
+                        <label class="styleinputcontainer__label" for="Asunto">Asunto</label>
+                    </div>
+                
+                    <div class="styleinputcontainer">
+                      <textarea class="styleinputcontainer__input styleinputcontainer__input--message" name="message" rows="10" placeholder="Mensaje" cols="40"></textarea>
+                      <label class="styleinputcontainer__label styleinputcontainer__label--message" for="message">Mensaje</label>
+                    </div>
+                </div>
+                
+                <div class="btncontainer">            
+                    <button class="btn" type="submit">Enviar mensaje</button>
+                </div>
+            </form>
         </article>
         </main>
         <footer>
