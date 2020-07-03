@@ -74,7 +74,7 @@
 .about-us-schedule p{
   align-items: center;
   width: auto;
-  font-size: .7em;
+  font-size: .8em;
   line-height: 2.5em;
 }
 .about-us-schedule h3{
@@ -139,6 +139,7 @@ width: 100px;
   .about-us img {
     width: 600px;
     margin-left: 80px;
+    flex-shrink: 0;
   }
   .about-us-description  h3 {
     font-size: 3em;
@@ -182,7 +183,7 @@ width: 100px;
     margin-bottom: 25px;
   }
   .about-us-Contact  p {
-    font-size: 1.1em;
+    font-size: 1.5em;
     width: 400px;
   }
   .information input{
