@@ -33,27 +33,26 @@ $('#btnRight').click(function(){
 
 //galery carousel
 var countGalery = $('.carousel-galery-container').children().length;
-const sizeGalery = 180;
-let counterGalery = 1;
+$(document).ready(function (){
+  var show=3;
+  var w = $('#slider').width() / show;
+  var l = $('.slide').length;
 
-$('.arrow-carousel-Left').click(function(){
-      if(counterGalery > 1) {
-            --counterGalery;
-            $('.carousel').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
-      }
-      else {
-            counterGalery = countGalery;
-            $('.carousel').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
-      }
-});
+  $('.slide').width(w);
+  $('#slider-container').width(w*l)
 
-$('.arrow-carousel-Right').click(function(){
-      if(counterGalery < countGalery) {
-            $('.carousel').css('transform', 'translateX(' + -size*counterGalery + '%)');
-            counterGalery++;
-      }
-      else {
-            $('.carousel').css('transform', 'translateX(' + 0 + '%)');
-            counterGalery = 1;
-      }
+  function slider(){
+    $('.slider:first-child').animate({
+      marginLeft: -w
+    }, 'slow' , function(){
+      $('this').appendTo($('this').parent()).css({marginLeft:0});
+    });
+  }
+  var timer = setInterval(slider, 2000);
+
+  $('#slider').hover(function(){
+    clearInterval(timer);
+  },function(){
+    timer=setInterval(slider, 2000);
+  });
 });
