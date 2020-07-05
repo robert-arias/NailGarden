@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
         //variables that will storage the info from the form
         const name = req.body.name
         const contact = req.body.contact
-        const appointmentDate = moment(req.body.date).format('MMM Do YY')
+        const appointmentDate = moment(req.body.date).format('YYYY-MM-DD')
         const startHour = req.body.hour != 'none' ? parseInt(req.body.hour) : 0
         const service = req.body.service != 'none' ? req.body.service : ''
         const description = req.body.description
@@ -32,8 +32,8 @@ router.post('/', async (req, res) => {
             errors.push({ msg: 'Debe seleccionar una fecha.' })
         }
 
-        //checks if the selected date is in the future
-        if (appointmentDate < moment().format('MMM Do YY')) {
+        //checks if selected date is in the past
+        if (!moment(req.body.date).isSameOrAfter(moment().format('YYYY-MM-DD'))) {
             errors.push({ msg: 'La cita no puede ser en el pasado.' })
         }
 
@@ -65,7 +65,7 @@ router.post('/', async (req, res) => {
 
             //searches if there are appointmets at the given start and end hour
             const oldAppointment = await Appointment.findOne({
-                date: appointmentDate,
+                date: new Date(req.body.date),
                 $and: [{
                     startHour: {
                         $lte: endHour
@@ -93,7 +93,7 @@ router.post('/', async (req, res) => {
                 const appointment = new Appointment({
                     name: name,
                     contact: contact,
-                    date: appointmentDate,
+                    date: new Date(req.body.date),
                     startHour: startHour,
                     endHour: endHour,
                     service: service,
@@ -109,6 +109,7 @@ router.post('/', async (req, res) => {
             }
         }
     } catch (err) {
+        console.log(err)
         //there has been an error
         errors.push({ msg: 'Ha ocurrido un error internamente. Intentalo más tarde.' })
         res.render('pages/appointment', {
