@@ -8,8 +8,7 @@ router.get('/', forwardAuthenticated, (req, res) => {
     //renders page with info
     res.render('profile/account', {
         name: req.user.name,
-        email: req.user.email,
-        authenticated: 'true'
+        email: req.user.email
     })
 })
 
@@ -21,9 +20,7 @@ router.get('/edit', forwardAuthenticated, (req, res) => {
         password: ''
     })
     res.render('profile/edit', {
-        css: '../css/sign.css',
-        user: tempUser,
-        authenticated: 'true'
+        user: tempUser
     })
 })
 
@@ -55,7 +52,7 @@ router.post('/', async (req, res) => {
 
         //compares the actual password with the typed actual password
         if (!await actualUser.comparePasswords(oldPassword)) {
-            errors.push({ msg: 'Las contraseña actual no coincide.' })
+            errors.push({ msg: 'La contraseña actual no coincide.' })
         }
 
         //checks if new password is less than 8 characters
@@ -85,7 +82,7 @@ router.post('/', async (req, res) => {
         }
     } catch {
         //there have been errors
-        errors.push({ msg: 'Ha ocurrido un error internamente. <br> Intentalo más tarde.' })
+        errors.push({ msg: 'Ha ocurrido un error internamente. Intentalo más tarde.' })
         res.render('/profile', {
             user: user,
             oldPassword: req.body.oldPassword,
@@ -110,7 +107,7 @@ router.get('/delete', forwardAuthenticated, async (req, res) => {
         res.redirect('/signin')
     } catch {
         //there has been an error
-        errors.push({ msg: 'Ha ocurrido un error internamente. <br> Intentalo más tarde.' })
+        errors.push({ msg: 'Ha ocurrido un error internamente. Intentalo más tarde.' })
         res.render('/profile', {
             user: user,
             oldPassword: req.body.oldPassword,

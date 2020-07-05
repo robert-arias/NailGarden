@@ -76,7 +76,7 @@ router.post('/', async (req, res) => {
             }
         } catch {
             //there's been an error
-            errors.push({ msg: 'Ha ocurrido un error internamente. <br> Intentalo más tarde.' })
+            errors.push({ msg: 'Ha ocurrido un error internamente. Intentalo más tarde.' })
             res.render('sign/signup', {
                 user: user,
                 rptPassword: req.body.rptPassword,
