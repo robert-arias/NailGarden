@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nail Garden</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/sign.css">
+        <script src="https://kit.fontawesome.com/463141b2af.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <a class="logo-anchor" href="/">
+                    <div class="logo" id="logo">
+                        Nail Garden
+                    </div>
+                </a>
+                <div class="nav-burger">
+                    <div class="burger-btn"></div>
+                </div>
+                <ul class="nav-items" id="nav-menu">
+                    <li><a href="/"><span class="underline">Inicio</span></a></li>
+                    <li><a href="/about-us"><span class="underline">Conocenos</span></a></li>
+                    <li><a href="/manicure"><span class="underline">Manicure</span></a></li>
+                    <li><a href="/makeup"><span class="underline">Maquillaje</span></a></li>
+                    <li><a href="/pedicure"><span class="underline">Pedicure</span></a></li>
+                    <li><a href="/appointment"><span class="underline">Agendar cita</span></a></li>
+
+                    <% if(typeof authenticated !== 'undefined'){ %>
+                        <li><a href="/profile" class="active"><span class="underline active">Perfil</span></a></li>
+                        <li><a href="/signout"><span class="underline">Cerrar sesión</span></a></li>
+                    <% } else { %> 
+                        <li><a href="/signin"><span class="underline">Iniciar sesión</span></a></li>
+                    <% } %> 
+                </ul>
+            </nav>
+        </header>
+        <main class="main-container">
+            <section class="main">
+                <form class="form" action="/profile" method="POST">
+                    <h1 class="form__title">Editar perfil</h1>
+                    <%- include('../partials/messages'); -%>
+                    <div class="inputcontainer">
+                        <div class="styleinputcontainer">
+                            <input class="styleinputcontainer__input styleinputcontainer__input--name" type="text" name="name" placeholder="Nombre completo" value="<%= typeof user != 'undefined' ? user.name : '' %>">
+                            <label class="styleinputcontainer__label" for="name">Nombre completo</label>
+                        </div>
+                    
+                        <div class="styleinputcontainer">
+                            <input class="styleinputcontainer__input styleinputcontainer__input--email" type="email" name="email" placeholder="Correo electrónico" value="<%= typeof user != 'undefined' ? user.email : '' %>">
+                            <label class="styleinputcontainer__label" for="email">Correo electrónico</label>
+                        </div>
+                    
+                        <div class="styleinputcontainer">
+                            <input class="styleinputcontainer__input styleinputcontainer__input--password" type="password" name="newPassword" autocomplete="off" placeholder="Nueva contraseña" value="<%= typeof user != 'undefined' ? user.password : '' %>">
+                            <label class="styleinputcontainer__label" for="password">Nueva contraseña</label>
+                        </div>
+                    
+                        <div class="styleinputcontainer">
+                            <input class="styleinputcontainer__input styleinputcontainer__input--password" type="password" name="oldPassword" placeholder="Confirmar contraseña actual" value="<%= typeof rptPassword != 'undefined' ? oldPassword : '' %>">
+                            <label class="styleinputcontainer__label" for="email">Confirmar contraseña actual</label>
+                        </div>
+                    </div>
+                    
+                    <div class="btncontainer">
+                        <a href="/profile" class="btn btn--cancel">Cancelar</a>
+                        <button class="btn btn--edit" type="submit">Editar perfil</button>
+                    </div>
+                    
+                </form>
+            </section>
+        </main>
+        <footer>
+            <a class="logo-anchor" href="/">
+                <div class="logo" id="logo">
+                    Nail Garden
+                </div>
+            </a>
+
+            <ul class="social-media">
+                <li>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        <script src="javascripts/main.js"></script>
+    </body>
+</html>

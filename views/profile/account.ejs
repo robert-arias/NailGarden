@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nail Garden</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/account.css">
+        <script src="https://kit.fontawesome.com/463141b2af.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navigation">
+                <a class="logo-anchor" href="/">
+                    <div class="logo" id="logo">
+                        Nail Garden
+                    </div>
+                </a>
+                <div class="nav-burger">
+                    <div class="burger-btn"></div>
+                </div>
+                <ul class="nav-items" id="nav-menu">
+                    <li><a href="/"><span class="underline">Inicio</span></a></li>
+                    <li><a href="/about-us"><span class="underline">Conocenos</span></a></li>
+                    <li><a href="/manicure"><span class="underline">Manicure</span></a></li>
+                    <li><a href="/makeup"><span class="underline">Maquillaje</span></a></li>
+                    <li><a href="/pedicure"><span class="underline">Pedicure</span></a></li>
+                    <li><a href="/appointment"><span class="underline">Agendar cita</span></a></li>
+
+                    <% if(typeof authenticated !== 'undefined'){ %>
+                        <li><a href="/profile" class="active"><span class="underline active">Perfil</span></a></li>
+                        <li><a href="/signout"><span class="underline">Cerrar sesión</span></a></li>
+                    <% } else { %> 
+                        <li><a href="/signin"><span class="underline">Iniciar sesión</span></a></li>
+                    <% } %> 
+                </ul>
+            </nav>
+        </header>
+        <main class="main-container">
+            <section class="main">
+                <h1 class="main__title" >Información de perfil</h1>
+                <section class="information">
+                    <div class="name">
+                        <p class="name__label">Nombre de perfil:</p>
+                        <p class="name__value">
+                            <%= name %> 
+                        </p>
+                    </div>
+            
+                    <div class="email">
+                        <p class="email__label">Correo electrónico:</p>
+                        <p class="email__value">
+                            <%= email %> 
+                        </p>
+                    </div>
+            
+                    <div class="password">
+                        <p class="password__label">Contraseña:</p>
+                        <p class="password__value">
+                            &bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;
+                        </p>
+                    </div>
+                </section>
+            
+                <section class="btncontainer">
+                    <a href="/profile/edit" class="btn btn--edit">Editar perfil</a>
+                    <a href="/profile/delete" class="btn btn--delete">Eliminar cuenta</a>
+                </section>
+                <%- include('../partials/messages'); -%>
+            </section>
+        </main>
+        <footer>
+            <a class="logo-anchor" href="/">
+                <div class="logo" id="logo">
+                    Nail Garden
+                </div>
+            </a>
+
+            <ul class="social-media">
+                <li>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook"></i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        <script src="javascripts/main.js"></script>
+    </body>
+</html>

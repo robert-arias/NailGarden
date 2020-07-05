@@ -1,0 +1,35 @@
+<% if(typeof errors != 'undefined'){ %> 
+  <% errors.forEach(function(error) { %>
+    <div class="alert warning">
+      <span class="closebtn warning" onclick="this.parentElement.style.display='none';">&times;</span>
+      <%= error.msg %>
+    </div>
+<% })} %>
+
+<% if(typeof success != 'undefined'){ %>
+  <div class="alert success">
+    <span class="closebtn success" onclick="this.parentElement.style.display='none';">&times;</span>
+    <%= success %>
+  </div>
+<% } %>
+
+<% if(success_msg != ''){ %>
+  <div class="alert success">
+    <span class="closebtn success" onclick="this.parentElement.style.display='none';">&times;</span>
+    <%= success_msg %>
+  </div>
+<% } %>
+
+<% if(error_msg != ''){ %>
+  <div class="alert warning">
+    <span class="closebtn warning" onclick="this.parentElement.style.display='none';">&times;</span>
+    <%= error_msg %>
+  </div>
+<% } %>
+
+<% if(error != ''){ %>
+  <div class="alert warning">
+    <span class="closebtn warning" onclick="this.parentElement.style.display='none';">&times;</span>
+    <%= error %>
+  </div
+<% } %>

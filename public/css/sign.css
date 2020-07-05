@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import './default/variables.css';
+@import './default/reset.css';
+@import './default/header.css';
+@import './default/footer.css';
+@import './default/messages.css';
+
+.main-container {
+    min-height: calc(100vh - 35px - (76px * 2));
+}
+
+/*taken from https://codepen.io/elujambio/pen/yjwzGP*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    width: 90%;
+    margin: 35px auto;
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+label {
+    font-family: inherit;
+}
+
+.form {
+    width: 100%;
+}
+
+.form__title {
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.inputcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.styleinputcontainer {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.styleinputcontainer__label {
+    font-size: 12.5px;
+    color: #000;
+    opacity: .8;
+    font-weight: 400;
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 20px;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: -1;
+}
+
+.btncontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.signupcontainer,
+.registercontainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.btn {
+    font-family: inherit;
+    display: inline-block;
+    -webkit-appearance: none;
+    text-align: center;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 14px;
+    width: 160px;
+    font-weight: bold;
+    box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+    border: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    outline: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn--edit {
+    margin-left: auto;
+    background-color: #9274ce;
+}
+
+.btn--cancel {
+    background-color: #D11A2A;
+}
+
+.btn:hover {
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+}
+
+.btn--edit:hover {
+    box-shadow: 0 2px 6px -1px rgba(182, 157, 230, 0.65);
+}
+
+.btn--cancel:hover {
+    box-shadow: 0 2px 6px -1px rgba(209, 26, 42, 0.50);
+}
+
+.btn:hover:active {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+}
+
+.styleinputcontainer__input {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 20px;
+    height: 56px;
+    border: none;
+    border: solid 2px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    color: #000;
+    font-weight: 400;
+    -webkit-appearance: none;
+}
+
+.styleinputcontainer__input:focus {
+    border-bottom: solid 2px #9274ce;
+    outline: 0;
+    box-shadow: 0 2px 6px -8px rgba(182, 157, 230, 0.45);
+}
+
+.styleinputcontainer__input:not(:placeholder-shown) {
+    padding: 28px 20px 12px 20px;
+}
+
+.styleinputcontainer__input:not(:placeholder-shown) + label {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: .7;
+    z-index: 1;
+}
+
+.registercontainer::before {
+    position: absolute;
+    top: -8px;
+    content: '';
+    width: 100%;
+    border: solid 1px gray;
+}
+
+.signupcontainer__checkbox {
+    margin-left: 2px;
+}
+
+.signupcontainer__label,
+.registercontainer__label {
+    font-size: .7em;
+    opacity: .8;
+    margin-left: 5px;
+}
+
+.registercontainer__btn {
+    text-decoration: none;
+}
+
+.signupcontainer__link {
+    color: var(--active-color);
+    text-decoration: none;
+}
+
+.signupcontainer__link:hover {
+    color: #ff4177;
+}
+
+@media screen and (min-width: 1000px) {
+    .main {
+        width: 50%;
+        align-items: flex-start;
+    }
+
+    .signupcontainer__label,
+    .registercontainer__label {
+        font-size: .8em;
+    }
+}
