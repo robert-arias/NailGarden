@@ -109,7 +109,6 @@ router.post('/', async (req, res) => {
             }
         }
     } catch (err) {
-        console.log(err)
         //there has been an error
         errors.push({ msg: 'Ha ocurrido un error internamente. Intentalo más tarde.' })
         res.render('pages/appointment', {
