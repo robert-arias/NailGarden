@@ -9,14 +9,13 @@ router.get('/', ensureAuthenticated, (req, res) => {
 })
 
 //User sends data to create an account
-router.post('/', async (req, res) => {
+router.post('/', ensureAuthenticated, async (req, res) => {
     //creates user object
     const user = new User({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password
     })
-    
     //storages the repeated password
     const rptPassword = req.body.rptPassword
     //variable for errors messages

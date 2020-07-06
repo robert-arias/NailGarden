@@ -25,7 +25,7 @@ router.get('/edit', forwardAuthenticated, (req, res) => {
 })
 
 //User send editted info
-router.post('/', async (req, res) => {
+router.post('/', forwardAuthenticated, async (req, res) => {
     try {
         //creates user object
         const user = new User({
@@ -109,8 +109,8 @@ router.get('/delete', forwardAuthenticated, async (req, res) => {
         //there has been an error
         errors.push({ msg: 'Ha ocurrido un error internamente. Intentalo más tarde.' })
         res.render('/profile', {
-            user: user,
-            oldPassword: req.body.oldPassword,
+            name: req.user.name,
+            email: req.user.email,
             errors: errors
         })
     }

@@ -9,7 +9,7 @@ router.get('/', ensureAuthenticated, (req, res) => {
 })
 
 //Sign in action; handled by passport and session
-router.post('/', passport.authenticate('local', {
+router.post('/', ensureAuthenticated, passport.authenticate('local', {
     successRedirect: '/profile',
     failureRedirect: '/signin',
     badRequestMessage: 'Debés ingresar tus credenciales.',

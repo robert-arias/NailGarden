@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const { forwardAuthenticated } = require('../config/auth')
 
 //Home page
 router.get('/', (req, res) => {
@@ -23,7 +24,7 @@ router.get('/pedicure', (req, res) => {
 })
 
 //Signs out the user from the current session
-router.get('/signout', (req, res) => {
+router.get('/signout', forwardAuthenticated, (req, res) => {
     //Logs it out
     req.logout()
     //Adds success message. It'll appear in the page to be redirected to

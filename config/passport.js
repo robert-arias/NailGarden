@@ -25,7 +25,7 @@ function initialize(passport) {
         } catch(e) {
             return done(e)
         }
-  }
+    }
 
   //makes the local strategy to make authentication and sets that the usernamefield is the email from the form
   passport.use(new LocalStrategy({ usernameField: 'email' }, authenticateUser))
