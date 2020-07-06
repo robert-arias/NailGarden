@@ -37,6 +37,12 @@ router.post('/', async (req, res) => {
             errors.push({ msg: 'La cita no puede ser en el pasado.' })
         }
 
+        if (!validateEmail(newContact.email)) {
+            if (newContact.contact.length < 8) {
+                errors.push({ msg: 'El medio de contacto dado es invalido.' })
+            }
+        }
+
         //checks if there were errors
         if (errors.length > 0) {
             //renders same page, but sends the found error (and the info that was typed)
@@ -128,6 +134,13 @@ function checkAuthentication(req, res, renderPage) {
     } else {
         res.render(renderPage)
     }
+}
+
+function validateEmail(email) {
+    //Regex email validation, from https://emailregex.com/
+    const emailRegexp = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
+
+    return emailRegexp.test(email)
 }
 
 module.exports = router
