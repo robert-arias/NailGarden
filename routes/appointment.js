@@ -16,7 +16,6 @@ router.post('/', async (req, res) => {
         //variables that will storage the info from the form
         const name = req.body.name
         const contact = req.body.contact
-        const appointmentDate = moment(req.body.date).format('YYYY-MM-DD')
         const startHour = req.body.hour != 'none' ? parseInt(req.body.hour) : 0
         const service = req.body.service != 'none' ? req.body.service : ''
         const description = req.body.description
