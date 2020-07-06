@@ -31,9 +31,9 @@
                   <% if(typeof authenticated !== 'undefined'){ %>
                       <li><a href="/profile"><span class="underline">Perfil</span></a></li>
                       <li><a href="/signout"><span class="underline">Cerrar sesión</span></a></li>
-                  <% } else { %> 
+                  <% } else { %>
                       <li><a href="/signin"><span class="underline">Iniciar sesión</span></a></li>
-                  <% } %> 
+                  <% } %>
               </ul>
           </nav>
       </header>
@@ -106,8 +106,11 @@
           ¿Tenés una fiesta y querés bailar? ¿No sabés que maquillaje funciona para vos? Obtené un maquillaje completo personalizado.
           Apartá tu lugar para tus eventos importantes y consentite ¡Te esperamos en Nail Garden!
         </p>
+        <div class="btncontainer">
+            <button class="btn" type="submit">Agendar cita</button>
+        </div>
         </article>
-      </main>    
+      </main>
       <footer>
           <a class="logo-anchor" href="/">
               <div class="logo" id="logo">

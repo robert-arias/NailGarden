@@ -56,3 +56,8 @@ $('.arrow-galery-Right').click(function(){
             counterGalery = 1;
       }
 });
+
+//button
+$('.btn').click(function(){
+  location.href="/appointment"
+});
