@@ -37,8 +37,8 @@ router.post('/', async (req, res) => {
             errors.push({ msg: 'La cita no puede ser en el pasado.' })
         }
 
-        if (!validateEmail(newContact.email)) {
-            if (newContact.contact.length < 8) {
+        if (!validateEmail(contact)) {
+            if (contact.length < 8) {
                 errors.push({ msg: 'El medio de contacto dado es invalido.' })
             }
         }
@@ -115,6 +115,7 @@ router.post('/', async (req, res) => {
             }
         }
     } catch (err) {
+        console.log(err);
         //there has been an error
         errors.push({ msg: 'Ha ocurrido un error internamente. Intentalo más tarde.' })
         res.render('pages/appointment', {

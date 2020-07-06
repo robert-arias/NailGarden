@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
             errors.push({ msg: 'Por favor, rellene todos los campos.' })
         }
 
-        if (!validateEmail(newContact.email)) {
+        if (!validateEmail(newContact.contact)) {
             if (newContact.contact.length < 8) {
                 errors.push({ msg: 'El medio de contacto dado es invalido.' })
             }
