@@ -90,7 +90,7 @@ router.post('/', async (req, res) => {
                     authenticated: req.isAuthenticated() ? 'true' : undefined,
                     name: name,
                     email: contact,
-                    date: appointmentDate,
+                    date: new Date(req.body.date),
                     description: description,
                     errors: errors
                 })
