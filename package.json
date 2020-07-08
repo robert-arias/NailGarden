@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "devStart": "nodemon server.js",
-    "scss": "node-sass --watch scss -o css --output-style expanded"
+    "scss": "node-sass --watch public/scss -o public/css --output-style expanded"
   },
   "author": "Norma Chavarría, Yanily Jiménez y Robert Arias",
   "license": "ISC",

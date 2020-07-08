@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $nav-color;
+    height: 76px;
+    padding: 10px 20px;
+
+    &__item {
+        display: inline-block;
+        font-size: 1.5em;
+
+        &:not(:last-child) {
+            margin-right: 7px;
+        }
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .nav__list {
+        margin-right: 65px;
+    }
+}

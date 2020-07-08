@@ -5,14 +5,14 @@
 @import './default/footer.css';
 
 /*3. Products*/
- .products-container {
+.products-container {
      width: 100%;
      margin: 0;
      padding-top: 15px;
      display: flex;
      flex-direction: column;
      align-items: center;
- }
+}
 
  .product {
      font-family: 'Montserrat', sans-serif;
