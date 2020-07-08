@@ -10,35 +10,29 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>
     <body>
-        <header>
-            <nav class="navigation">
-                <a class="logo-anchor" href="/">
-                    <div class="logo" id="logo">
+        <header class="header">
+            <nav class="nav">
+                <a class="nav__logo-link" href="/">
+                    <div class="nav__logo" id="logo">
                         Nail Garden
                     </div>
                 </a>
-                <div class="nav-burger">
-                    <div class="burger-btn"></div>
+                <div class="nav__burger">
+                    <div class="nav__burger--btn"></div>
                 </div>
-                <ul class="nav-items" id="nav-menu">
-                    <li><a href="/"><span class="underline">Inicio</span></a></li>
-                    <li><a href="/about-us"><span class="underline">Conocenos</span></a></li>
-                    <li><a href="/manicure"><span class="underline">Manicure</span></a></li>
-                    <li><a href="/makeup"><span class="underline">Maquillaje</span></a></li>
-                    <li><a href="/pedicure"><span class="underline">Pedicure</span></a></li>
-                    <li><a href="/appointment"><span class="underline">Agendar cita</span></a></li>
-
-                    <% if(typeof authenticated !== 'undefined'){ %>
-                        <li><a href="/profile"><span class="underline">Perfil</span></a></li>
-                        <li><a href="/signout"><span class="underline">Cerrar sesión</span></a></li>
-                    <% } else { %> 
-                        <li><a href="/signin" class="active"><span class="underline active">Iniciar sesión</span></a></li>
-                    <% } %> 
+                <ul class="nav__list" id="nav-menu">
+                    <li class="nav__item"><a href="/" class="nav__link"><span class="nav__underline">Inicio</span></a></li>
+                    <li class="nav__item"><a href="/about-us" class="nav__link"><span class="nav__underline">Conocenos</span></a></li>
+                    <li class="nav__item"><a href="/manicure" class="nav__link"><span class="nav__underline">Manicure</span></a></li>
+                    <li class="nav__item"><a href="/makeup" class="nav__link"><span class="nav__underline">Maquillaje</span></a></li>
+                    <li class="nav__item"><a href="/pedicure" class="nav__link"><span class="nav__underline">Pedicure</span></a></li>
+                    <li class="nav__item"><a href="/appointment" class="nav__link"><span class="nav__underline">Agendar cita</span></a></li>
+                    <li class="nav__item"><a href="/signin" class="nav__link nav__link--highlight"><span class="nav__underline nav__underline--active">Iniciar sesión</span></a></li>
                 </ul>
             </nav>
         </header>
-        <main class="main-container">
-            <section class="main">
+        <main class="main">
+            <section class="section">
                 <form class="form" action="/signin" method="POST">
                     <h1 class="form__title">Iniciar sesión</h1>
                     <%- include('../partials/messages'); -%>
@@ -66,26 +60,26 @@
                 </form>
             </section>
         </main>
-        <footer>
-            <a class="logo-anchor" href="/">
-                <div class="logo" id="logo">
+        <footer class="footer">
+            <a class="nav__logo-link" href="/">
+                <div class="nav__logo" id="logo">
                     Nail Garden
                 </div>
             </a>
 
-            <ul class="social-media">
-                <li>
-                    <a href="#">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">
                         <i class="fab fa-facebook"></i></i>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">
                         <i class="far fa-envelope"></i>
                     </a>
                 </li>
