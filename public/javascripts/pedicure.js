@@ -20,7 +20,7 @@ $('.carousel-container__btnLeft').click(function(){
       }
 });
 
-$('.carousel-container_btnRight').click(function(){
+$('.carousel-container__btnRight').click(function(){
       if(counter < count) {
             $('.pedicure-type-container').css('transform', 'translateX(' + -size*counter + '%)');
             counter++;
@@ -46,7 +46,7 @@ $('.galery-container__btnLeft').click(function(){
       }
 });
 
-$('.galery-container_btnRight').click(function(){
+$('.galery-container__btnRight').click(function(){
       if(counterGalery < countGalery) {
             $('.pedicure-container-galery').css('transform', 'translateX(' + -size*counterGalery + '%)');
             counterGalery++;
