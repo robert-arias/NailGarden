@@ -1,35 +1,35 @@
 <% if(typeof errors != 'undefined'){ %> 
   <% errors.forEach(function(error) { %>
     <div class="alert alert--warning">
-      <span class="alert__closebtn alert--warning" onclick="this.parentElement.style.display='none';">&times;</span>
+      <span class="alert__closeBtn alert--warning" onclick="this.parentElement.style.display='none';">&times;</span>
       <%= error.msg %>
     </div>
 <% })} %>
 
 <% if(typeof success != 'undefined'){ %>
   <div class="alert alert--success">
-    <span class="alert__closebtn alert--success" onclick="this.parentElement.style.display='none';">&times;</span>
+    <span class="alert__closeBtn alert--success" onclick="this.parentElement.style.display='none';">&times;</span>
     <%= success %>
   </div>
 <% } %>
 
 <% if(success_msg != ''){ %>
   <div class="alert alert--success">
-    <span class="alert__closebtn alert--success" onclick="this.parentElement.style.display='none';">&times;</span>
+    <span class="alert__closeBtn alert--success" onclick="this.parentElement.style.display='none';">&times;</span>
     <%= success_msg %>
   </div>
 <% } %>
 
 <% if(error_msg != ''){ %>
   <div class="alert alert--warning">
-    <span class="alert__closebtn alert--warning" onclick="this.parentElement.style.display='none';">&times;</span>
+    <span class="alert__closeBtn alert--warning" onclick="this.parentElement.style.display='none';">&times;</span>
     <%= error_msg %>
   </div>
 <% } %>
 
 <% if(error != ''){ %>
   <div class="alert alert--warning">
-    <span class="alert__closebtn alert--warning" onclick="this.parentElement.style.display='none';">&times;</span>
+    <span class="alert__closeBtn alert--warning" onclick="this.parentElement.style.display='none';">&times;</span>
     <%= error %>
   </div
 <% } %>
