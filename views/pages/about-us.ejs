@@ -10,45 +10,45 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>
     <body>
-        <header>
-            <nav class="navigation">
-                <a class="logo-anchor" href="/">
-                    <div class="logo" id="logo">
-                        Nail Garden
-                    </div>
-                </a>
-                <div class="nav-burger">
-                    <div class="burger-btn"></div>
-                </div>
-                <ul class="nav-items" id="nav-menu">
-                    <li><a href="/"><span class="underline">Inicio</span></a></li>
-                    <li><a href="/about-us" class="active"><span class="underline active">Conocenos</span></a></li>
-                    <li><a href="/manicure"><span class="underline">Manicure</span></a></li>
-                    <li><a href="/makeup"><span class="underline">Maquillaje</span></a></li>
-                    <li><a href="/pedicure"><span class="underline">Pedicure</span></a></li>
-                    <li><a href="/appointment"><span class="underline">Agendar cita</span></a></li>
-
-                    <% if(typeof authenticated !== 'undefined'){ %>
-                        <li><a href="/profile"><span class="underline">Perfil</span></a></li>
-                        <li><a href="/signout"><span class="underline">Cerrar sesión</span></a></li>
-                    <% } else { %> 
-                        <li><a href="/signin"><span class="underline">Iniciar sesión</span></a></li>
-                    <% } %> 
-                </ul>
-            </nav>
+      <header class="header">
+          <nav class="nav">
+              <a class="nav__logo-link" href="/">
+                  <div class="nav__logo" id="logo">
+                      Nail Garden
+                  </div>
+              </a>
+              <div class="nav__burger">
+                  <div class="nav__burger--btn"></div>
+              </div>
+              <ul class="nav__list" id="nav-menu">
+                  <li class="nav__item"><a href="/" class="nav__link"><span class="nav__underline">Inicio</span></a></li>
+                  <li class="nav__item"><a href="/about-us" class="nav__link nav__link--highlight"><span class="nav__underline nav__underline--active"> Conocenos</span></a></li>
+                  <li class="nav__item"><a href="/manicure" class="nav__link"><span class="nav__underline">Manicure</span></a></li>
+                  <li class="nav__item"><a href="/makeup" class="nav__link"><span class="nav__underline">Maquillaje</span></a></li>
+                  <li class="nav__item"><a href="/pedicure" class="nav__link"><span class="nav__underline">Pedicure</span></a></li>
+                  <li class="nav__item"><a href="/appointment" class="nav__link"><span class="nav__underline">Agendar cita</span></a></li>
+                  <% if(typeof authenticated !== 'undefined'){ %>
+                      <li class="nav__item"><a href="/profile" class="nav__link"><span class="nav__underline">Perfil</span></a></li>
+                      <li class="nav__item"><a href="/signout" class="nav__link"><span class="nav__underline">Cerrar sesión</span></a></li>
+                  <% } else { %>
+                      <li class="nav__item"><a href="/signin" class="nav__link"><span class="nav__underline">Iniciar sesión</span></a></li>
+                  <% } %>
+              </ul>
+          </nav>
+      </header>
         </header>
         <main>
             <article class="about-us-container">
                 <div class="about-us">
-                  <img src="assets/historia.jpg" alt="nails">
+                  <img class="about-us__image" src="assets/historia.jpg" alt="nails">
                     <div class="about-us-description">
-                      <h3>Nuestra historia</h3>
-                      <p>
+                      <h3 class="about-us-description__title">Nuestra historia</h3>
+                      <p class="about-us-description__paragraph">
                           Somos una empresa que lo que busca es el cuidado de la apariencia de las personas y lo que más nos importa
                           es la satisfaccion de  nuestros clientes. Contamos con más de 5 años de experiencia brindando un servicio de alta calidad,
                           con precios realmente cómodos, gran variedad de diseños, colores y texturas.
                       </p>
-                      <p>
+                      <p class="about-us-description__paragraph">
                         Todo este crecimiento no hubiese sido posible sin el apoyo de nuestros clientes que son parte de la familia de NailGarden.
                         De manera que, si estás buscando el lugar perfecto para tus uñas y cuidado personal no busques más, que ya lo has encontrado,
                         se llama NailGarden con un excelente personal capacitado.
@@ -58,10 +58,10 @@
               </article>
               <article class="schedule-container">
                 <div class="schedule">
-                  <img src="assets/horario1.jpg" alt="nails">
-                    <div class="about-us-schedule">
-                      <h3>Horario</h3>
-                    <p>
+                  <img class="schedule__image" src="assets/horario1.jpg" alt="nails">
+                    <div class="schedule-description">
+                      <h3 class="schedule-description__title" >Horario</h3>
+                    <p class="schedule-description__paragraph" >
                         Lunes  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   .................................................................&nbsp;8 am - 5 pm <br>
                         Martes   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;................................................................&nbsp;8 am - 5 pm <br>
                         Miércoles  &nbsp;................................................................&nbsp;8 am - 5 pm <br>
@@ -74,9 +74,9 @@
                 </div>
               </article>
               <article class="contact-container">
-                <h1 class="form__title">Contactanos</h1>
+                <h1 class="contact-container__title">Contactanos</h1>
 
-                <p class="form__paragraph">
+                <p class="contact-container__paragraph">
                   Si estás interesada en nuestros servicios o tenés alguna duda acerca nuestros precios u ofertas, no dudés en contactarnos.
                 </p>
                 <%- include('../partials/messages'); -%>
@@ -87,53 +87,54 @@
                           <input class="styleinputcontainer__input styleinputcontainer__input--name" type="text" name="name" placeholder="Nombre completo"  value="<%= typeof name != 'undefined' ? name : '' %>">
                           <label class="styleinputcontainer__label" for="name">Nombre completo</label>
                       </div>
-                  
+
                       <div class="styleinputcontainer">
                           <input class="styleinputcontainer__input styleinputcontainer__input--email" type="text" name="contact" placeholder="Correo electrónico o número telefónico" value="<%= typeof contact != 'undefined' ? contact : '' %>">
                           <label class="styleinputcontainer__label" for="contact">Correo electrónico o número telefónico</label>
                       </div>
-                  
+
                       <div class="styleinputcontainer">
                           <input class="styleinputcontainer__input styleinputcontainer__input--password" type="text" name="subject" autocomplete="off" placeholder="Asunto" value="<%= typeof subject != 'undefined' ? subject : '' %>">
                           <label class="styleinputcontainer__label" for="Asunto">Asunto</label>
                       </div>
-                  
+
                       <div class="styleinputcontainer">
                         <textarea class="styleinputcontainer__input styleinputcontainer__input--message" name="message" rows="10" placeholder="Mensaje" cols="40"><%= typeof message != 'undefined' ? message : '' %></textarea>
                         <label class="styleinputcontainer__label styleinputcontainer__label--message" for="message">Mensaje</label>
                       </div>
                   </div>
-                  
-                  <div class="btncontainer">            
+
+                  <div class="btncontainer">
                       <button class="btn" type="submit">Enviar mensaje</button>
                   </div>
               </form>
           </article>
           </main>
-          <footer>
-            <a class="logo-anchor" href="/">
-                <div class="logo" id="logo">
-                    Nail Garden
-                </div>
-            </a>
+          <footer class="footer">
+              <a class="nav__logo-link" href="/">
+                  <div class="nav__logo" id="logo">
+                      Nail Garden
+                  </div>
+              </a>
 
-            <ul class="social-media">
-                <li>
-                    <a href="#">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fab fa-facebook"></i></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="far fa-envelope"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+              <ul class="footer__list">
+                  <li class="footer__item">
+                      <a href="#" class="footer__link">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                  </li>
+                  <li class="footer__item">
+                      <a href="#" class="footer__link">
+                          <i class="fab fa-facebook"></i></i>
+                      </a>
+                  </li>
+                  <li class="footer__item">
+                      <a href="#" class="footer__link">
+                          <i class="far fa-envelope"></i>
+                      </a>
+                  </li>
+              </ul>
+          </footer>
+          <script src="../javascripts/main.js"></script>
     </body>
 </html>
