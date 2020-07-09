@@ -10,127 +10,126 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
-      <header>
-          <nav class="navigation">
-              <a class="logo-anchor" href="/">
-                  <div class="logo" id="logo">
-                      Nail Garden
-                  </div>
-              </a>
-              <div class="nav-burger">
-                  <div class="burger-btn"></div>
-              </div>
-              <ul class="nav-items" id="nav-menu">
-                  <li><a href="/"><span class="underline">Inicio</span></a></li>
-                  <li><a href="/about-us"><span class="underline">Conocenos</span></a></li>
-                  <li><a href="/manicure"><span class="underline">Manicure</span></a></li>
-                  <li><a href="/makeup" class="active"><span class="underline active">Maquillaje</span></a></li>
-                  <li><a href="/pedicure"><span class="underline">Pedicure</span></a></li>
-                  <li><a href="/appointment"><span class="underline">Agendar cita</span></a></li>
-
-                  <% if(typeof authenticated !== 'undefined'){ %>
-                      <li><a href="/profile"><span class="underline">Perfil</span></a></li>
-                      <li><a href="/signout"><span class="underline">Cerrar sesión</span></a></li>
-                  <% } else { %>
-                      <li><a href="/signin"><span class="underline">Iniciar sesión</span></a></li>
-                  <% } %>
-              </ul>
-          </nav>
+    <header class="header">
+        <nav class="nav">
+            <a class="nav__logo-link" href="/">
+                <div class="nav__logo" id="logo">
+                    Nail Garden
+                </div>
+            </a>
+            <div class="nav__burger">
+                <div class="nav__burger--btn"></div>
+            </div>
+            <ul class="nav__list" id="nav-menu">
+                <li class="nav__item"><a href="/" class="nav__link"><span class="nav__underline">Inicio</span></a></li>
+                <li class="nav__item"><a href="/about-us" class="nav__link"><span class="nav__underline">Conocenos</span></a></li>
+                <li class="nav__item"><a href="/manicure" class="nav__link"><span class="nav__underline">Manicure</span></a></li>
+                <li class="nav__item"><a href="/makeup" class="nav__link nav__link--highlight"><span class= "nav__underline nav__underline--active">Maquillaje</span></a></li>
+                <li class="nav__item"><a href="/pedicure" class="nav__link"><span class="nav__underline">Pedicure</span></a></li>
+                <li class="nav__item"><a href="/appointment" class="nav__link"><span class="nav__underline">Agendar cita</span></a></li>
+                <% if(typeof authenticated !== 'undefined'){ %>
+                    <li class="nav__item"><a href="/profile" class="nav__link"><span class="nav__underline">Perfil</span></a></li>
+                    <li class="nav__item"><a href="/signout" class="nav__link"><span class="nav__underline">Cerrar sesión</span></a></li>
+                <% } else { %>
+                    <li class="nav__item"><a href="/signin" class="nav__link"><span class="nav__underline">Iniciar sesión</span></a></li>
+                <% } %>
+            </ul>
+        </nav>
       </header>
       <main>
-        <article class="makeup_container">
-          <h3>Maquillaje</h3>
-          <p class="makeup_description">
+        <article class="makeupI-container">
+          <h3 class="makeupI-container__title">Maquillaje</h3>
+          <p class="makeupI-container__description">
           Dentro de lo que los cosmetólogos definen como maquillaje social, hay distintos estilos. Si bien su característica principal es que busca corregir o disimular imperfecciones y embellecer el rostro, hay diferentes tipos según sea para el día o la noche o el lugar o evento para el cual te preparás. Y Nail Garden te ofrece diferentes estilos para que te sientas comoda en todo momento.
           </p>
         </article>
-        <article class="carrusel-container">
-          <h2>Tipos</h2>
-          <div class="makeup-type-container">
-            <div class="type">
-              <img src="../assets/maquillajed.jpg" alt="nails">
+        <article class="carousel-container">
+          <h2 class="carousel-container__titleC">Tipos</h2>
+          <div class="makeup-type">
+            <div class="makeup-type-container">
+              <img class="makeup-type-container__image" src="../assets/maquillajed.jpg" alt="nails">
               <div class="type-description">
-                <h3>Maquillaje de día</h3>
-                  <p>
+                <h3 class="carousel-container__title">Maquillaje de día</h3>
+                  <p class="type-description__paragraph">
                     Si bien es un estilo menos cargado que el nocturno, no implica que salgas a cara lavada. Suele ser un make up en tonos más luminosos, donde pueden predominar los dorados, marrones, tonos rosas, y también se le da muchísima importancia a la prolijidad y luminosidad de la piel.
                   </p>
                 </div>
             </div>
-          <div class="type">
-            <img src="../assets/maquillaje2.jpg" alt="nails">
+          <div class="makeup-type-container">
+            <img class="makeup-type-container__image" src="../assets/maquillaje2.jpg" alt="nails">
             <div class="type-description">
-              <h3>Maquillaje de noche</h3>
-                <p>
+              <h3 class="carousel-container__title">Maquillaje de noche</h3>
+                <p class="type-description__paragraph">
                  El make up nocturno acompaña looks muy elegantes y suele ser más cargado que un maquillaje de día. Podés jugar con varios colores intensos sin miedo, ya que la noche atenúa todo el maquillaje.
                 </p>
             </div>
           </div>
-          <div class="type">
-            <img src="../assets/maquillajecoti.jpg" alt="nails">
+          <div class="makeup-type-container">
+            <img class="makeup-type-container__image" src="../assets/maquillajecoti.jpg" alt="nails">
             <div class="type-description">
-              <h3>Maquillaje nude</h3>
-              <p>
+              <h3 class="carousel-container__title">Maquillaje nude</h3>
+              <p class="type-description__paragraph">
               Parece muy simple, pero también tiene sus secretos. En primer lugar, se aplica y distribuye una base de tono bien suave; después, se corrigen las imperfecciones propias del cutis, como las pecas, manchas y ojeras.
               </p>
             </div>
           </div>
         </div>
-       <li class="fas fa-arrow-left arrowLeft" id="btnLeft"></li>
-       <li class="fas fa-arrow-right arrowRight" id="btnRight"></li>
+       <li class="carousel-container__btnLeft fas fa-arrow-left" id="btnLeft"></li>
+       <li class="carousel-container__btnRight fas fa-arrow-right" id="btnRight"></li>
       </article>
       <article class="galery-container">
-        <h2>Galería</h2>
-          <div class="makeup-galery-container">
-            <div class="galery">
-              <img src="../assets/maquillaje6.jpg" alt="nails">
+        <h2 class="galery-container__title">Galería</h2>
+          <div class="makeup-container">
+            <div class="makeup-container-galery">
+              <img class="makeup-container-galery__image" src="../assets/maquillaje6.jpg" alt="nails">
             </div>
-            <div class="galery">
-              <img src="../assets/maquillaje3.jpg" alt="nails">
+            <div class="makeup-container-galery">
+              <img class="makeup-container-galery__image" src="../assets/maquillaje3.jpg" alt="nails">
             </div>
-            <div class="galery">
-              <img src="../assets/maquillaje4.jpg" alt="nails">
+            <div class="makeup-container-galery">
+              <img class="makeup-container-galery__image" src="../assets/maquillaje4.jpg" alt="nails">
             </div>
-            <div class="galery">
-              <img src="../assets/maquillaje5.jpg" alt="nails">
+            <div class="makeup-container-galery">
+              <img class="makeup-container-galery__image" src="../assets/maquillaje5.jpg" alt="nails">
             </div>
-            <div class="galery">
-              <img src="../assets/maquillaje1.jpg" alt="nails">
+            <div class="makeup-container-galery">
+              <img class="makeup-container-galery__image" src="../assets/maquillaje1.jpg" alt="nails">
             </div>
         </div>
-      <li class="fas fa-arrow-left arrow-galery-Left" id="btn-galery-Left"></li>
-      <li class="fas fa-arrow-right arrow-galery-Right" id="btn-galery-Right"></li>
+      <li class="galery-container__btnLeft fas fa-arrow-left" id="btn-galery-Left"></li>
+      <li class="galery-container__btnRight fas fa-arrow-right" id="btn-galery-Right"></li>
       </article>
       <article class="makeup-appointment">
-        <h3>Agendá una cita</h3>
-        <p class="makeup-appointment-description">
+        <h3 class="makeup-appointment__title">Agendá una cita</h3>
+        <p class="makeup-appointment__description">
           ¿Tenés una fiesta y querés bailar? ¿No sabés que maquillaje funciona para vos? Obtené un maquillaje completo personalizado.
           Apartá tu lugar para tus eventos importantes y consentite ¡Te esperamos en Nail Garden!
         </p>
-        <div class="btncontainer">
-            <button class="btn" type="submit">Agendar cita</button>
+        <div class="btn-container">
+            <a href="/appointment" class="btn-container__button">Agendar cita</a>
         </div>
         </article>
       </main>
-      <footer>
-          <a class="logo-anchor" href="/">
-              <div class="logo" id="logo">
+      <footer class="footer">
+          <a class="nav__logo-link" href="/">
+              <div class="nav__logo" id="logo">
                   Nail Garden
               </div>
           </a>
 
-          <ul class="social-media">
-              <li>
-                  <a href="#">
+          <ul class="footer__list">
+              <li class="footer__item">
+                  <a href="#" class="footer__link">
                       <i class="fab fa-instagram"></i>
                   </a>
               </li>
-              <li>
-                  <a href="#">
+              <li class="footer__item">
+                  <a href="#" class="footer__link">
                       <i class="fab fa-facebook"></i></i>
                   </a>
               </li>
-              <li>
-                  <a href="#">
+              <li class="footer__item">
+                  <a href="#" class="footer__link">
                       <i class="far fa-envelope"></i>
                   </a>
               </li>

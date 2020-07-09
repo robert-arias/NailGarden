@@ -6,58 +6,53 @@ $('.nav__burger').click(function(){
 });
 
 //Type makeup
-var count = $('.makeup-type-container').children().length;
+var count = $('.makeup_type').children().length;
 const size = 180;
 let counter = 1;
-$('.arrowLeft').click(function(){
+$('.carousel_container_btnLeft').click(function(){
       if(counter > 1) {
             --counter;
-            $('.type').css('transform', 'translateX(' + -size*(counter-1) + '%)');
+            $('.makeup_type-container').css('transform', 'translateX(' + -size*(counter-1) + '%)');
       }
       else {
             counter = count;
-            $('.type').css('transform', 'translateX(' + -size*(counter-1) + '%)');
+            $('.makeup_type-container').css('transform', 'translateX(' + -size*(counter-1) + '%)');
       }
 });
 
-$('.arrowRight').click(function(){
+$('.carousel_container_btnRight').click(function(){
       if(counter < count) {
-            $('.type').css('transform', 'translateX(' + -size*counter + '%)');
+            $('.makeup_type-container').css('transform', 'translateX(' + -size*counter + '%)');
             counter++;
       }
       else {
-            $('.type').css('transform', 'translateX(' + 0 + '%)');
+            $('.makeup_type-container').css('transform', 'translateX(' + 0 + '%)');
             counter = 1;
       }
 });
 
 //galery makeup
-var countGalery = $('.makeup-galery-container').children().length;
+var countGalery = $('.makeup_container').children().length;
 const sizeGalery = 180;
 let counterGalery = 1;
-$('.arrow-galery-Left').click(function(){
+$('.galery_container_btnLeft').click(function(){
       if(counterGalery > 1) {
             --counterGalery;
-            $('.galery').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
+            $('.makeup_container-galery').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
       }
       else {
             counterGalery = countGalery;
-            $('.galery').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
+            $('.makeup_container-galery').css('transform', 'translateX(' + -size*(counterGalery-1) + '%)');
       }
 });
 
-$('.arrow-galery-Right').click(function(){
+$('.galery_container_btnRight').click(function(){
       if(counterGalery < countGalery) {
-            $('.galery').css('transform', 'translateX(' + -size*counterGalery + '%)');
+            $('.makeup_container-galery').css('transform', 'translateX(' + -size*counterGalery + '%)');
             counterGalery++;
       }
       else {
-            $('.galery').css('transform', 'translateX(' + 0 + '%)');
+            $('.makeup_container-galery').css('transform', 'translateX(' + 0 + '%)');
             counterGalery = 1;
       }
-});
-
-//button
-$('.btn').click(function(){
-  location.href="/appointment"
 });
