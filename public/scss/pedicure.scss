@@ -4,7 +4,7 @@
 @import 'layout/header';
 @import 'layout/footer';
 
-.pedicureI_container{
+.pedicureI_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,22 +12,22 @@
   margin: 0;
   padding-top: 15px;
 
-  &-title{
+  &-title {
     font-family: $menu-font-family, sans-serif;
     font-size: 2em;
     margin-bottom: 10px;
   }
-  &-description{
+  &-description {
     width: 90%;
     line-height: 1.3em;
     font-size: 1.1em;
     font-family:'Montserrat', sans-serif;
     margin-bottom: 30px;
+    text-align: justify;
   }
 }
 
-
-.carousel_container{
+.carousel_container {
   position: relative;
   padding-top: 15px;
   padding-bottom: 25px;
@@ -36,7 +36,7 @@
   align-items: center;
   background-color: #eee7d8;
 
-  &-titleC{
+  &-titleC {
     font-family: $menu-font-family, sans-serif;
   }
 
@@ -47,7 +47,7 @@
   }
 
   &_btnLeft,
-  &_btnRight{
+  &_btnRight {
     position: absolute;
     top: 50%;
     color: gray;
@@ -92,7 +92,7 @@
         margin-right: 80%;
       }
 
-      &-image{
+      &-image {
         width: 100%;
         height: 200px;
         margin-bottom: 10px;
@@ -100,7 +100,7 @@
     }
   }
 
-.type_description{
+.type_description {
   display: flex;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
@@ -137,7 +137,7 @@
   }
 
   &_btnLeft,
-  &_btnRight{
+  &_btnRight {
     position: absolute;
     top: 50%;
     color: gray;
@@ -244,4 +244,76 @@
           }
       }
     }
+}
+
+@media screen and (min-width: 1000px) {
+
+ .pedicureI_container {
+   &-description{
+     width: 70%;
+   }
+ }
+ .carousel_container {
+   padding-top: 50px;
+   padding-bottom: 30px;
+
+   &-title {
+     font-size: 2em;
+   }
+
+   &_btnLeft {
+     left: 200px;
+   }
+
+   &_btnRight {
+     right: 200px;
+   }
+ }
+
+ .pedicure_type-container {
+   font-size: .9em;
+
+   &-image {
+     height: 400px;
+     margin-bottom: 25px;
+   }
+   &-paragraph {
+     width: 100%;
+   }
+ }
+ .pedicure_type {
+   width: 40%;
+ }
+
+
+ .pedicure_container-galery {
+   &-image {
+     width: 50%;
+     height: 450px;
+     margin-left: 270px;
+   }
+ }
+
+ .galery_container {
+   &_btnLeft {
+     left: 200px;
+   }
+
+   &_btnRight {
+     right: 200px;
+   }
+ }
+
+ .pedicure_appointment {
+   width: 100%;
+   margin: 0;
+   padding-top: 30px;
+
+   &-description {
+     width: 70%;
+     text-align: justify;
+     font-size: 1.1em;
+     margin-bottom: 20px;
+   }
+ }
 }
