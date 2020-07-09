@@ -213,8 +213,8 @@
     justify-content: center;
     margin-bottom: 30px;
 
-    &-button {
-      font-family: inherit;
+    &_button {
+      font-family: $logo-font-family;
       -webkit-appearance: none;
       width: auto;
       text-align: center;

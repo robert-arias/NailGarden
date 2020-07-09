@@ -455,8 +455,8 @@ h2 {
   margin-bottom: 30px;
 }
 
-.btn_container-button {
-  font-family: inherit;
+.btn_container_button {
+  font-family: "Source Sans Pro";
   -webkit-appearance: none;
   width: auto;
   text-align: center;
@@ -476,13 +476,13 @@ h2 {
   font-weight: bold;
 }
 
-.btn_container-button:hover {
+.btn_container_button:hover {
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
   box-shadow: 0 2px 6px -1px rgba(182, 157, 230, 0.65);
 }
 
-.btn_container-button:hover:active {
+.btn_container_button:hover:active {
   -webkit-transform: scale(0.99);
   transform: scale(0.99);
 }
