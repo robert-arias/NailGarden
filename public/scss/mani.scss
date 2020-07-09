@@ -4,7 +4,7 @@
 @import 'layout/header';
 @import 'layout/footer';
 
-.pedicureI-container {
+.manicureI-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +67,7 @@
   }
 }
 
-.pedicure-type {
+.manicure-type {
   width: 80%;
   display: flex;
   overflow: hidden;
@@ -98,7 +98,7 @@
         margin-bottom: 10px;
       }
     }
-  }
+}
 
 .type-description {
   display: flex;
@@ -158,7 +158,7 @@
 
 }
 
-.pedicure-container {
+.manicure-container {
   width: 80%;
   display: flex;
   overflow: hidden;
@@ -185,7 +185,7 @@
   }
 }
 
-.pedicure-appointment {
+.manicure-appointment {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,7 +247,7 @@
 }
 
 @media screen and (min-width: 1000px) {
- .pedicureI-container {
+ .manicureI-container {
    &__description{
      width: 70%;
    }
@@ -269,7 +269,7 @@
    }
  }
 
- .pedicure-type-container {
+ .manicure-type-container {
    font-size: .9em;
 
    &__image {
@@ -280,10 +280,12 @@
      width: 100%;
    }
  }
- .pedicure-type {
+ .manicure-type {
    width: 40%;
  }
- .pedicure-container-galery {
+
+
+ .manicure-container-galery {
    &__image {
      width: 50%;
      height: 450px;
@@ -301,7 +303,7 @@
    }
  }
 
- .pedicure-appointment {
+ .manicure-appointment {
    width: 100%;
    margin: 0;
    padding-top: 30px;

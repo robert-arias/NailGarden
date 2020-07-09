@@ -245,7 +245,7 @@ h2 {
   }
 }
 
-.pedicureI_container {
+.pedicureI-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,13 +254,13 @@ h2 {
   padding-top: 15px;
 }
 
-.pedicureI_container-title {
+.pedicureI-container__title {
   font-family: "Playfair Display", sans-serif;
   font-size: 2em;
   margin-bottom: 10px;
 }
 
-.pedicureI_container-description {
+.pedicureI-container__description {
   width: 90%;
   line-height: 1.3em;
   font-size: 1.1em;
@@ -269,7 +269,7 @@ h2 {
   text-align: justify;
 }
 
-.carousel_container {
+.carousel-container {
   position: relative;
   padding-top: 15px;
   padding-bottom: 25px;
@@ -279,42 +279,42 @@ h2 {
   background-color: #eee7d8;
 }
 
-.carousel_container-titleC {
+.carousel-container__titleC {
   font-family: "Playfair Display", sans-serif;
 }
 
-.carousel_container-title {
+.carousel-container__title {
   font-family: "Playfair Display", sans-serif;
   font-size: 1.5em;
   margin-bottom: 20px;
 }
 
-.carousel_container_btnLeft, .carousel_container_btnRight {
+.carousel-container__btnLeft, .carousel-container__btnRight {
   position: absolute;
   top: 50%;
   color: gray;
   font-size: 1em;
 }
 
-.carousel_container_btnLeft:hover, .carousel_container_btnRight:hover {
+.carousel-container__btnLeft:hover, .carousel-container__btnRight:hover {
   opacity: .5;
 }
 
-.carousel_container_btnLeft {
+.carousel-container__btnLeft {
   left: 10px;
 }
 
-.carousel_container_btnRight {
+.carousel-container__btnRight {
   right: 10px;
 }
 
-.pedicure_type {
+.pedicure-type {
   width: 80%;
   display: flex;
   overflow: hidden;
 }
 
-.pedicure_type-container {
+.pedicure-type-container {
   font-family: 'Montserrat', sans-serif;
   font-size: .8em;
   width: 100%;
@@ -331,17 +331,17 @@ h2 {
   transition: all .5s ease-out;
 }
 
-.pedicure_type-container:not(:last-child) {
+.pedicure-type-container:not(:last-child) {
   margin-right: 80%;
 }
 
-.pedicure_type-container-image {
+.pedicure-type-container__image {
   width: 100%;
   height: 200px;
   margin-bottom: 10px;
 }
 
-.type_description {
+.type-description {
   display: flex;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
@@ -353,7 +353,7 @@ h2 {
   transition: all .5s ease-out;
 }
 
-.type_description-paragraph {
+.type-description__paragraph {
   margin: 10px;
   text-align: center;
   width: 90%;
@@ -361,11 +361,11 @@ h2 {
   font-size: 1em;
 }
 
-.type_description:not(:last-child) {
+.type-description:not(:last-child) {
   margin-right: 80%;
 }
 
-.galery_container {
+.galery-container {
   position: relative;
   padding-top: 15px;
   padding-bottom: 25px;
@@ -375,37 +375,37 @@ h2 {
   background-color: #F2F2E9;
 }
 
-.galery_container-title {
+.galery-container__title {
   font-family: "Playfair Display", sans-serif;
 }
 
-.galery_container_btnLeft, .galery_container_btnRight {
+.galery-container__btnLeft, .galery-container__btnRight {
   position: absolute;
   top: 50%;
   color: gray;
   font-size: 1em;
 }
 
-.galery_container_btnLeft:hover, .galery_container_btnRight:hover {
+.galery-container__btnLeft:hover, .galery-container__btnRight:hover {
   opacity: .5;
 }
 
-.galery_container_btnLeft {
+.galery-container__btnLeft {
   left: 10px;
 }
 
-.galery_container_btnRight {
+.galery-container__btnRight {
   right: 10px;
 }
 
-.pedicure_container {
+.pedicure-container {
   width: 80%;
   display: flex;
   overflow: hidden;
   flex-direction: row;
 }
 
-.pedicure_container-galery {
+.pedicure-container-galery {
   width: 100%;
   flex-shrink: 0;
   display: flex;
@@ -416,17 +416,17 @@ h2 {
   transition: all .5s ease-out;
 }
 
-.pedicure_container-galery:not(:last-child) {
+.pedicure-container-galery:not(:last-child) {
   margin-right: 80%;
 }
 
-.pedicure_container-galery-image {
+.pedicure-container-galery__image {
   width: 100%;
   height: 250px;
   margin-bottom: 10px;
 }
 
-.pedicure_appointment {
+.pedicure-appointment {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -435,7 +435,7 @@ h2 {
   padding-top: 15px;
 }
 
-.pedicure_appointment-description {
+.pedicure-appointment__description {
   width: 90%;
   line-height: 1.3em;
   font-size: 1em;
@@ -444,18 +444,18 @@ h2 {
   margin-bottom: 25px;
 }
 
-.pedicure_appointment-title {
+.pedicure-appointment__title {
   font-family: "Playfair Display", sans-serif;
   font-size: 2em;
 }
 
-.btn_container {
+.btn-container {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.btn_container_button {
+.btn-container__button {
   font-family: "Source Sans Pro";
   -webkit-appearance: none;
   width: auto;
@@ -476,64 +476,64 @@ h2 {
   font-weight: bold;
 }
 
-.btn_container_button:hover {
+.btn-container__button:hover {
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
   box-shadow: 0 2px 6px -1px rgba(182, 157, 230, 0.65);
 }
 
-.btn_container_button:hover:active {
+.btn-container__button:hover:active {
   -webkit-transform: scale(0.99);
   transform: scale(0.99);
 }
 
 @media screen and (min-width: 1000px) {
-  .pedicureI_container-description {
+  .pedicureI-container__description {
     width: 70%;
   }
-  .carousel_container {
+  .carousel-container {
     padding-top: 50px;
     padding-bottom: 30px;
   }
-  .carousel_container-title {
+  .carousel-container__title {
     font-size: 2em;
   }
-  .carousel_container_btnLeft {
+  .carousel-container__btnLeft {
     left: 200px;
   }
-  .carousel_container_btnRight {
+  .carousel-container__btnRight {
     right: 200px;
   }
-  .pedicure_type-container {
+  .pedicure-type-container {
     font-size: .9em;
   }
-  .pedicure_type-container-image {
+  .pedicure-type-container__image {
     height: 400px;
     margin-bottom: 25px;
   }
-  .pedicure_type-container-paragraph {
+  .pedicure-type-container__paragraph {
     width: 100%;
   }
-  .pedicure_type {
+  .pedicure-type {
     width: 40%;
   }
-  .pedicure_container-galery-image {
+  .pedicure-container-galery__image {
     width: 50%;
     height: 450px;
     margin-left: 270px;
   }
-  .galery_container_btnLeft {
+  .galery-container__btnLeft {
     left: 200px;
   }
-  .galery_container_btnRight {
+  .galery-container__btnRight {
     right: 200px;
   }
-  .pedicure_appointment {
+  .pedicure-appointment {
     width: 100%;
     margin: 0;
     padding-top: 30px;
   }
-  .pedicure_appointment-description {
+  .pedicure-appointment__description {
     width: 70%;
     text-align: justify;
     font-size: 1.1em;
