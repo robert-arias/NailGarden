@@ -1,8 +1,8 @@
 //Burger button opens
-$('.nav-burger').click(function(){
-      $(this).toggleClass("open");
-      $(".nav-items").toggleClass("open");
-      $(".logo").toggleClass("open");
+$('.nav__burger').click(function(){
+      $('.nav__burger--btn').toggleClass("nav__burger--btn--open");
+      $('.nav__list').toggleClass('nav__list--open');
+      $('.nav__logo').toggleClass('nav__logo--open');
 });
 
 //Type makeup

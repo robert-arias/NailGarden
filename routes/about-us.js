@@ -68,7 +68,7 @@ function checkAuthentication(req, res, renderPage) {
         res.render(renderPage, {
             authenticated: 'true',
             name: req.user.name,
-            email: req.user.email
+            contact: req.user.email
         })
     } else {
         res.render(renderPage)
