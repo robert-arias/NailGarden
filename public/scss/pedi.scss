@@ -4,7 +4,7 @@
 @import 'layout/header';
 @import 'layout/footer';
 
-.pedicure_container{
+.pedicureI_container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
   padding-top: 15px;
 
   &-title{
-    font-family: var(--menu-font-family), sans-serif;
+    font-family: $menu-font-family, sans-serif;
     font-size: 2em;
     margin-bottom: 10px;
   }
@@ -37,11 +37,11 @@
   background-color: #eee7d8;
 
   &-titleC{
-    font-family: var(--menu-font-family), sans-serif;
+    font-family: $menu-font-family, sans-serif;
   }
 
   &-title {
-    font-family: var(--menu-font-family), sans-serif;
+    font-family: $menu-font-family, sans-serif;
     font-size: 1.5em;
     margin-bottom: 20px;
   }
@@ -121,4 +121,127 @@
   &:not(:last-child) {
     margin-right: 80%;
   }
+}
+
+.galery_container {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F2F2E9;
+
+  &-title {
+    font-family: $menu-font-family, sans-serif;
+  }
+
+  &_btnLeft,
+  &_btnRight{
+    position: absolute;
+    top: 50%;
+    color: gray;
+    font-size: 1em;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  &_btnLeft {
+    left: 10px;
+  }
+
+  &_btnRight {
+    right: 10px;
+  }
+
+}
+
+.pedicure_container {
+  width: 80%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+
+  &-galery {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all .5s ease-out;
+
+    &:not(:last-child) {
+      margin-right: 80%;
+    }
+    &-image {
+      width: 100%;
+      height: 250px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.pedicure_appointment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+
+  &-description {
+    width: 90%;
+    line-height: 1.3em;
+    font-size: 1em;
+    font-family:'Montserrat', sans-serif;
+    text-align: justify;
+    margin-bottom: 25px;
+  }
+
+  &-title {
+    font-family: $menu-font-family, sans-serif;
+    font-size: 2em;
+  }
+}
+
+.btn_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    &-button {
+      font-family: inherit;
+      -webkit-appearance: none;
+      width: auto;
+      text-align: center;
+      padding: 10px;
+      background-color: #D11A2A;;
+      color: #fff;
+      font-size: 14px;
+      width: 160px;
+      font-weight: 500;
+      box-shadow: 0px 2px 6px -1px rgba(0, 0, 0, 0.13);
+      border: none;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+      outline: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:hover {
+          -webkit-transform: translateY(-3px);
+                  transform: translateY(-3px);
+          box-shadow: 0 2px 6px -1px rgba(182, 157, 230, 0.65);
+
+          &:active {
+              -webkit-transform: scale(0.99);
+                      transform: scale(0.99);
+          }
+      }
+    }
 }
