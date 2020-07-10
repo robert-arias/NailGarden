@@ -78,7 +78,7 @@ app.use('/appointment', appointmentRouter)
 
 //404, resource not found
 app.use((req, res, next) => {
-    res.status(404).render('pages/error');
+    res.status(404).send('404 error. Page not found. Sorry!');
 })
 
 //sets the port in which to listen; the server is going to tell us which port to listen (when it's deployed), but for development reason, we're gonna use port 3000
