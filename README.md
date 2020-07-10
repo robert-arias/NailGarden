@@ -20,7 +20,7 @@ Para poder correr el servidor con la página se debe de:
 Con los pasos anteriores se corre el servidor. Los valores de las variables de entorno pueden variar dependiendo de las preferencias del usuario.
 
 ## Página
-Pueden ver la página en (https://nail-garden.herokuapp.com/)[https://nail-garden.herokuapp.com/]
+Pueden ver la página en https://nail-garden.herokuapp.com/
 
 ## Participantes
 * [Norma Chavarría Rojas](https://github.com/norma430)
