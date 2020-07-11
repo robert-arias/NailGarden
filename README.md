@@ -5,7 +5,7 @@ Proyecto del curso de multimedios.
 El proyecto consiste en un sistema web de cuidado personal, donde las personas que lo visitan podrán ver los servicios ofrecidos, así como una página para poder contactar a la organización, una página de registro e inicio de sesión, una página del perfil, así como una página para agendar una cita.
 
 ## Requisitos
-Debe tener [Node.js](https://nodejs.org/en/download/) y [MongoDB](https://www.mongodb.com/try/download/community) instalado en sus computadores.
+Deben tener [Node.js](https://nodejs.org/en/download/) y [MongoDB](https://www.mongodb.com/try/download/community) instalado en sus computadores.
 
 ## Instalación
 Para poder correr el servidor con la página se debe de:
